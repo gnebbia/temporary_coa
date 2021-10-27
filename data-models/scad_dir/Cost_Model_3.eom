@@ -1,0 +1,449 @@
+<?xml version="1.0" ?>
+<com.foreseeti.kernalCAD:XMIObjectModel xmlns:xmi="http://www.omg.org/XMI" xmlns:com.foreseeti.kernalCAD="http:///com/foreseeti/ObjectModel.ecore" samplingMethod="FORWARD" samples="1000" integerUniformJumpRange="1" warningThreshold="100" xmi:version="2.0">
+	<objects id="-2368410965832023575" name="WebS" metaConcept="Application" exportedId="25" attributesJsonString="{&quot;Disabled_mc&quot;: &quot;20&quot;}" description="">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+		<evidenceAttributes description="" metaConcept="Disabled">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+	</objects>
+	<objects id="-3631718234761772042" name="DbS" metaConcept="Application" exportedId="26" attributesJsonString="{&quot;Disabled_mc&quot;: &quot;15&quot;}" description="">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+		<evidenceAttributes description="" metaConcept="Disabled">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+	</objects>
+	<objects id="-1157966146697214404" name="Attacker" metaConcept="Attacker" exportedId="27" attributesJsonString="{}" description="">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</objects>
+	<objects id="1118284040409073641" name="Db" metaConcept="Data" exportedId="28" attributesJsonString="{&quot;DataNotPresent_tc&quot;: &quot;6 3 1&quot;, &quot;DataNotPresent_mc&quot;: &quot;7 5 2&quot;}" description="">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+		<evidenceAttributes description="" metaConcept="DataNotPresent">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+		<evidenceAttributes description="" metaConcept="Delete" consequence="2"/>
+	</objects>
+	<objects id="6789129354889284489" name="SysA" metaConcept="System" exportedId="29" attributesJsonString="{}" description="">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</objects>
+	<objects id="-4653264553505567803" name="ID" metaConcept="Identity" exportedId="30" attributesJsonString="{&quot;TwoFactorAuthentication_mc&quot;: &quot;10 5 3&quot;}" description="">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+		<evidenceAttributes description="" metaConcept="Disabled">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+	</objects>
+	<objects id="4507446775059006089" name="CredWeb" metaConcept="Credentials" exportedId="31" attributesJsonString="{}" description="">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+		<evidenceAttributes description="" metaConcept="NotDisclosed">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="1.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+	</objects>
+	<objects id="-3948439529172611274" name="LAN" metaConcept="Network" exportedId="32" attributesJsonString="{&quot;EavesdropDefense_tc&quot;: &quot;7 6 1&quot;, &quot;EavesdropDefense_mc&quot;: &quot;10 5 3&quot;}" description="">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+		<evidenceAttributes description="" metaConcept="Eavesdrop" consequence="3"/>
+	</objects>
+	<objects id="4717782687150002129" name="SysB" metaConcept="System" exportedId="33" attributesJsonString="{}" description="">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</objects>
+	<objects id="2237098784104532401" name="DbInfo" metaConcept="Information" exportedId="34" attributesJsonString="{}" description="">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</objects>
+	<objects id="942166286847853761" name="UserA" metaConcept="User" exportedId="38" attributesJsonString="{}" description="">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+		<evidenceAttributes description="" metaConcept="NoPasswordReuse">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="1.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+	</objects>
+	<objects id="7696655509327856" name="SoftwareVulnerability" metaConcept="SoftwareVulnerability" exportedId="39" attributesJsonString="{}" description="">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+		<evidenceAttributes description="" metaConcept="UserInteractionRequired">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+		<evidenceAttributes description="" metaConcept="PhysicalAccessRequired">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+		<evidenceAttributes description="" metaConcept="NetworkAccessRequired">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+		<evidenceAttributes description="" metaConcept="LowPrivilegesRequired">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+		<evidenceAttributes description="" metaConcept="LocalAccessRequired">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+		<evidenceAttributes description="" metaConcept="IntegrityImpactLimitations">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+		<evidenceAttributes description="" metaConcept="HighPrivilegesRequired">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+		<evidenceAttributes description="" metaConcept="HighComplexityExploitRequired">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+		<evidenceAttributes description="" metaConcept="ConfidentialityImpactLimitations">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+		<evidenceAttributes description="" metaConcept="AvailabilityImpactLimitations">
+			<evidenceDistribution type="Bernoulli">
+				<parameters name="probability" value="0.0"/>
+			</evidenceDistribution>
+		</evidenceAttributes>
+	</objects>
+	<associations description="" sourceObject="-2368410965832023575" targetObject="-3948439529172611274" sourceProperty="networks" targetProperty="applications" id="833628304394075">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<associations description="" sourceObject="-3631718234761772042" targetObject="7696655509327856" sourceProperty="vulnerabilities" targetProperty="application" id="304499300254097">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<associations description="" sourceObject="-1157966146697214404" targetObject="4507446775059006089" sourceProperty="firstSteps" targetProperty="use.attacker" id="567598249694506">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<associations description="" sourceObject="-1157966146697214404" targetObject="-2368410965832023575" sourceProperty="firstSteps" targetProperty="fullAccess.attacker" id="142540079104269">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<associations description="" sourceObject="1118284040409073641" targetObject="-3631718234761772042" sourceProperty="containingApp" targetProperty="containedData" id="240555923689396">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<associations description="" sourceObject="6789129354889284489" targetObject="-2368410965832023575" sourceProperty="sysExecutedApps" targetProperty="hostSystem" id="249683121729690">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<associations description="" sourceObject="-4653264553505567803" targetObject="4507446775059006089" sourceProperty="credentials" targetProperty="identities" id="115049454885302">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<associations description="" sourceObject="-4653264553505567803" targetObject="-3631718234761772042" sourceProperty="execPrivApps" targetProperty="executionPrivIds" id="332495738439385">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<associations description="" sourceObject="-4653264553505567803" targetObject="-2368410965832023575" sourceProperty="highPrivApps" targetProperty="highPrivAppIds" id="144392279017528">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<associations description="" sourceObject="-3948439529172611274" targetObject="-3631718234761772042" sourceProperty="applications" targetProperty="networks" id="301430540819936">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<associations description="" sourceObject="4717782687150002129" targetObject="-3631718234761772042" sourceProperty="sysExecutedApps" targetProperty="hostSystem" id="384061534044364">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<associations description="" sourceObject="2237098784104532401" targetObject="1118284040409073641" sourceProperty="containerData" targetProperty="information" id="279952542805130">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<associations description="" sourceObject="942166286847853761" targetObject="-4653264553505567803" sourceProperty="userIds" targetProperty="users" id="115431411458451">
+		<existence type="FixedBoolean">
+			<parameters name="fixed" value="1.0"/>
+		</existence>
+	</associations>
+	<defenseDefaultValueConfigurations metaConcept="Application">
+		<attributeConfigurations metaConcept="AirGapped">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="Disabled">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="SupplyChainAuditing">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+	</defenseDefaultValueConfigurations>
+	<defenseDefaultValueConfigurations metaConcept="ConnectionRule">
+		<attributeConfigurations metaConcept="Disabled">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="Filtered">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+	</defenseDefaultValueConfigurations>
+	<defenseDefaultValueConfigurations metaConcept="Credentials">
+		<attributeConfigurations metaConcept="NotDisclosed">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+	</defenseDefaultValueConfigurations>
+	<defenseDefaultValueConfigurations metaConcept="Data">
+		<attributeConfigurations metaConcept="Authenticated">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="DataNotPresent">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+	</defenseDefaultValueConfigurations>
+	<defenseDefaultValueConfigurations metaConcept="Identity">
+		<attributeConfigurations metaConcept="Disabled">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="TwoFactorAuthentication">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+	</defenseDefaultValueConfigurations>
+	<defenseDefaultValueConfigurations metaConcept="Network">
+		<attributeConfigurations metaConcept="EavesdropDefense">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="ManInTheMiddleDefense">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="NetworkAccessControl">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+	</defenseDefaultValueConfigurations>
+	<defenseDefaultValueConfigurations metaConcept="Privileges">
+		<attributeConfigurations metaConcept="Disabled">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+	</defenseDefaultValueConfigurations>
+	<defenseDefaultValueConfigurations metaConcept="RoutingFirewall">
+		<attributeConfigurations metaConcept="AirGapped">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="Disabled">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="SupplyChainAuditing">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+	</defenseDefaultValueConfigurations>
+	<defenseDefaultValueConfigurations metaConcept="SoftwareVulnerability">
+		<attributeConfigurations metaConcept="AvailabilityImpactLimitations">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="ConfidentialityImpactLimitations">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="HighComplexityExploitRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="HighPrivilegesRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="IntegrityImpactLimitations">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="LocalAccessRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="LowPrivilegesRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="NetworkAccessRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="PhysicalAccessRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="Remove">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="UserInteractionRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+	</defenseDefaultValueConfigurations>
+	<defenseDefaultValueConfigurations metaConcept="System">
+		<attributeConfigurations metaConcept="HardwareModificationsProtection">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="SupplyChainAuditing">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+	</defenseDefaultValueConfigurations>
+	<defenseDefaultValueConfigurations metaConcept="UnknownSoftwareVulnerability">
+		<attributeConfigurations metaConcept="AvailabilityImpactLimitations">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="ConfidentialityImpactLimitations">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="HighComplexityExploitRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="HighPrivilegesRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="IntegrityImpactLimitations">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="LocalAccessRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="LowPrivilegesRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="NetworkAccessRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="PhysicalAccessRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="Remove">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="UserInteractionRequired">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+	</defenseDefaultValueConfigurations>
+	<defenseDefaultValueConfigurations metaConcept="User">
+		<attributeConfigurations metaConcept="NoPasswordReuse">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+		<attributeConfigurations metaConcept="SecurityAwareness">
+			<defaultValue type="FixedBoolean">
+				<parameters name="fixed"/>
+			</defaultValue>
+		</attributeConfigurations>
+	</defenseDefaultValueConfigurations>
+</com.foreseeti.kernalCAD:XMIObjectModel>

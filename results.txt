@@ -1,0 +1,334 @@
+BUDGET:  20
+Log in to Enterprise...done
+Obtaining full language metadata cost update done
+Project pid  --  446664605265379
+model name  --  simpleModel
+model downloaded
+model unzipped in  --  data-models/scad_dir
+downloaded model deleted
+scenario cleaning process started ...
+cleaning done
+scenario created
+simulation created
+TTC values for  6.Eavesdrop is [0.0, 5.0, 22.0]
+TTC values for  11.Modify is [0.0, 5.0, 22.0]
+TTC values for  13.Read is [0.0, 5.0, 22.0]
+Steps of interest are:  ['6.Eavesdrop', '11.Modify', '13.Read']
+critical path fetched
+critical path converted to a graph
+critical path fetched
+critical path converted to a graph
+critical path fetched
+critical path converted to a graph
+
+Number of graphs sent to Merge -  3
+Change of NetworkX Graph Status
+['(6).EavesdropDefense.Disable', '(6).Eavesdrop', '(6).AccessNetworkData', '(6).Access', '(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).NetworkAccess', '(4).LocalAccess', '(4).NetworkConnect', '(4).Authenticate', '(4).Disabled.Disable', '(4).LocalConnect', '(4).NetworkConnectFromReverseTakeover', '(3).Assume', '(4).AirGapped.Disable', '(4).AttemptNetworkConnectFromReverseTakeover', '(3).Disabled.Disable', '(3).TwoFactorAuthentication.Disable', '(3).AttemptAssume', '(2).ReverseTakeover', '(1).EntryPoint', '(2).AttemptReverseTakeover', '(2).PhishUser', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(2).SecurityAwareness.Disable']
+['(6).EavesdropDefense.Disable', '(6).Eavesdrop', '(6).AccessNetworkData', '(6).Access', '(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).NetworkAccess', '(4).LocalAccess', '(4).NetworkConnect', '(4).Authenticate', '(4).Disabled.Disable', '(4).LocalConnect', '(4).NetworkConnectFromReverseTakeover', '(3).Assume', '(4).AirGapped.Disable', '(4).AttemptNetworkConnectFromReverseTakeover', '(3).Disabled.Disable', '(3).TwoFactorAuthentication.Disable', '(3).AttemptAssume', '(2).ReverseTakeover', '(1).EntryPoint', '(2).AttemptReverseTakeover', '(2).PhishUser', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(2).SecurityAwareness.Disable', '(12).Modify', '(11).Modify', '(12).Impact', '(12).Exploit', '(12).ExploitTrivially', '(12).Abuse', '(12).Remove.Disable', '(11).AttemptUseVulnerability', '(11).Disabled.Disable', '(11).NetworkConnect', '(10).Access']
+['(6).EavesdropDefense.Disable', '(6).Eavesdrop', '(6).AccessNetworkData', '(6).Access', '(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).NetworkAccess', '(4).LocalAccess', '(4).NetworkConnect', '(4).Authenticate', '(4).Disabled.Disable', '(4).LocalConnect', '(4).NetworkConnectFromReverseTakeover', '(3).Assume', '(4).AirGapped.Disable', '(4).AttemptNetworkConnectFromReverseTakeover', '(3).Disabled.Disable', '(3).TwoFactorAuthentication.Disable', '(3).AttemptAssume', '(2).ReverseTakeover', '(1).EntryPoint', '(2).AttemptReverseTakeover', '(2).PhishUser', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(2).SecurityAwareness.Disable', '(12).Modify', '(11).Modify', '(12).Impact', '(12).Exploit', '(12).ExploitTrivially', '(12).Abuse', '(12).Remove.Disable', '(11).AttemptUseVulnerability', '(11).Disabled.Disable', '(11).NetworkConnect', '(10).Access', '(13).DataNotPresent.Disable', '(13).Read', '(13).AttemptRead', '(7).Read', '(11).Read', '(9).Read', '(12).Read', '(9).Impact', '(9).Exploit', '(9).ExploitTrivially', '(9).Abuse', '(7).AttemptUseVulnerability', '(9).Remove.Disable', '(7).Disabled.Disable', '(7).NetworkConnect']
+
+Criticality of Attack steps
+
+Sorted Nodes
+['(4).Authenticate', '(4).Disabled.Disable', '(4).NetworkConnectFromReverseTakeover', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(1).EntryPoint', '(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).NetworkAccess', '(4).LocalAccess', '(4).NetworkConnect', '(4).LocalConnect', '(3).Assume', '(3).Disabled.Disable', '(3).TwoFactorAuthentication.Disable', '(3).AttemptAssume', '(6).Access', '(12).Impact', '(12).Exploit', '(12).ExploitTrivially', '(12).Abuse', '(12).Remove.Disable', '(11).AttemptUseVulnerability', '(11).Disabled.Disable', '(11).NetworkConnect', '(10).Access', '(4).AirGapped.Disable', '(4).AttemptNetworkConnectFromReverseTakeover', '(2).ReverseTakeover', '(2).AttemptReverseTakeover', '(2).PhishUser', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(2).SecurityAwareness.Disable', '(6).EavesdropDefense.Disable', '(6).AccessNetworkData', '(12).Modify', '(13).DataNotPresent.Disable', '(13).AttemptRead', '(7).Read', '(11).Read', '(9).Read', '(12).Read', '(9).Impact', '(9).Exploit', '(9).ExploitTrivially', '(9).Abuse', '(7).AttemptUseVulnerability', '(9).Remove.Disable', '(7).Disabled.Disable', '(7).NetworkConnect', '(6).Eavesdrop', '(11).Modify', '(13).Read']
+
+Sorted Nodes with Criticality Scores
+(4).Authenticate 	 53
+(4).Disabled.Disable 	 53
+(4).NetworkConnectFromReverseTakeover 	 53
+(4).AttemptUnsafeUserActivityWithHighPrivileges 	 53
+(1).EntryPoint 	 52
+(4).AccessNetworkAndConnections 	 51
+(4).FullAccess 	 50
+(4).NetworkAccess 	 50
+(4).LocalAccess 	 50
+(4).NetworkConnect 	 50
+(4).LocalConnect 	 50
+(3).Assume 	 50
+(3).Disabled.Disable 	 50
+(3).TwoFactorAuthentication.Disable 	 50
+(3).AttemptAssume 	 50
+(6).Access 	 49
+(12).Impact 	 49
+(12).Exploit 	 49
+(12).ExploitTrivially 	 49
+(12).Abuse 	 49
+(12).Remove.Disable 	 49
+(11).AttemptUseVulnerability 	 49
+(11).Disabled.Disable 	 49
+(11).NetworkConnect 	 49
+(10).Access 	 49
+(4).AirGapped.Disable 	 48
+(4).AttemptNetworkConnectFromReverseTakeover 	 48
+(2).ReverseTakeover 	 48
+(2).AttemptReverseTakeover 	 48
+(2).PhishUser 	 48
+(2).UnsafeUserActivity 	 48
+(2).UnforcedUnsafeUserActivity 	 48
+(2).SecurityAwareness.Disable 	 48
+(6).EavesdropDefense.Disable 	 47
+(6).AccessNetworkData 	 47
+(12).Modify 	 47
+(13).DataNotPresent.Disable 	 47
+(13).AttemptRead 	 47
+(7).Read 	 47
+(11).Read 	 47
+(9).Read 	 47
+(12).Read 	 47
+(9).Impact 	 47
+(9).Exploit 	 47
+(9).ExploitTrivially 	 47
+(9).Abuse 	 47
+(7).AttemptUseVulnerability 	 47
+(9).Remove.Disable 	 47
+(7).Disabled.Disable 	 47
+(7).NetworkConnect 	 47
+(6).Eavesdrop 	 46
+(11).Modify 	 46
+(13).Read 	 46
+
+Criticality of Attack steps
+NODE : (6).Eavesdrop   Frequency : 2
+NODE : (6).AccessNetworkData   Frequency : 2
+NODE : (6).Access   Frequency : 4
+NODE : (4).AccessNetworkAndConnections   Frequency : 6
+NODE : (4).FullAccess   Frequency : 6
+NODE : (4).NetworkAccess   Frequency : 6
+NODE : (4).LocalAccess   Frequency : 6
+NODE : (4).NetworkConnect   Frequency : 6
+NODE : (4).Authenticate   Frequency : 6
+NODE : (4).LocalConnect   Frequency : 6
+NODE : (4).NetworkConnectFromReverseTakeover   Frequency : 3
+NODE : (3).Assume   Frequency : 6
+NODE : (4).AttemptNetworkConnectFromReverseTakeover   Frequency : 3
+NODE : (3).AttemptAssume   Frequency : 6
+NODE : (2).ReverseTakeover   Frequency : 3
+NODE : (1).EntryPoint   Frequency : 6
+NODE : (2).AttemptReverseTakeover   Frequency : 3
+NODE : (2).PhishUser   Frequency : 3
+NODE : (4).AttemptUnsafeUserActivityWithHighPrivileges   Frequency : 3
+NODE : (2).UnsafeUserActivity   Frequency : 3
+NODE : (2).UnforcedUnsafeUserActivity   Frequency : 3
+NODE : (12).Modify   Frequency : 2
+NODE : (11).Modify   Frequency : 2
+NODE : (12).Impact   Frequency : 4
+NODE : (12).Exploit   Frequency : 4
+NODE : (12).ExploitTrivially   Frequency : 4
+NODE : (12).Abuse   Frequency : 4
+NODE : (11).AttemptUseVulnerability   Frequency : 4
+NODE : (11).NetworkConnect   Frequency : 4
+NODE : (10).Access   Frequency : 4
+NODE : (13).Read   Frequency : 2
+NODE : (13).AttemptRead   Frequency : 2
+NODE : (7).Read   Frequency : 2
+NODE : (11).Read   Frequency : 2
+NODE : (9).Read   Frequency : 2
+NODE : (12).Read   Frequency : 2
+NODE : (9).Impact   Frequency : 2
+NODE : (9).Exploit   Frequency : 2
+NODE : (9).ExploitTrivially   Frequency : 2
+NODE : (9).Abuse   Frequency : 2
+NODE : (7).AttemptUseVulnerability   Frequency : 2
+NODE : (7).NetworkConnect   Frequency : 2
+
+Sorted Nodes
+['(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).NetworkAccess', '(4).LocalAccess', '(4).NetworkConnect', '(4).Authenticate', '(4).LocalConnect', '(3).Assume', '(3).AttemptAssume', '(1).EntryPoint', '(6).Access', '(12).Impact', '(12).Exploit', '(12).ExploitTrivially', '(12).Abuse', '(11).AttemptUseVulnerability', '(11).NetworkConnect', '(10).Access', '(4).NetworkConnectFromReverseTakeover', '(4).AttemptNetworkConnectFromReverseTakeover', '(2).ReverseTakeover', '(2).AttemptReverseTakeover', '(2).PhishUser', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(6).Eavesdrop', '(6).AccessNetworkData', '(12).Modify', '(11).Modify', '(13).Read', '(13).AttemptRead', '(7).Read', '(11).Read', '(9).Read', '(12).Read', '(9).Impact', '(9).Exploit', '(9).ExploitTrivially', '(9).Abuse', '(7).AttemptUseVulnerability', '(7).NetworkConnect']
+
+Sorted Nodes with Criticality Scores
+(4).AccessNetworkAndConnections 	 42
+(4).FullAccess 	 42
+(4).NetworkAccess 	 42
+(4).LocalAccess 	 42
+(4).NetworkConnect 	 42
+(4).Authenticate 	 42
+(4).LocalConnect 	 42
+(3).Assume 	 42
+(3).AttemptAssume 	 42
+(1).EntryPoint 	 42
+(6).Access 	 41
+(12).Impact 	 41
+(12).Exploit 	 41
+(12).ExploitTrivially 	 41
+(12).Abuse 	 41
+(11).AttemptUseVulnerability 	 41
+(11).NetworkConnect 	 41
+(10).Access 	 41
+(4).NetworkConnectFromReverseTakeover 	 40
+(4).AttemptNetworkConnectFromReverseTakeover 	 40
+(2).ReverseTakeover 	 40
+(2).AttemptReverseTakeover 	 40
+(2).PhishUser 	 40
+(4).AttemptUnsafeUserActivityWithHighPrivileges 	 40
+(2).UnsafeUserActivity 	 40
+(2).UnforcedUnsafeUserActivity 	 40
+(6).Eavesdrop 	 39
+(6).AccessNetworkData 	 39
+(12).Modify 	 39
+(11).Modify 	 39
+(13).Read 	 39
+(13).AttemptRead 	 39
+(7).Read 	 39
+(11).Read 	 39
+(9).Read 	 39
+(12).Read 	 39
+(9).Impact 	 39
+(9).Exploit 	 39
+(9).ExploitTrivially 	 39
+(9).Abuse 	 39
+(7).AttemptUseVulnerability 	 39
+(7).NetworkConnect 	 39
+
+Analyzing critical attack step to get suitable defense
+(4).AccessNetworkAndConnections
+Defense not available for Attack step: (4).AccessNetworkAndConnections
+(4).FullAccess
+Defense not available for Attack step: (4).FullAccess
+(4).NetworkAccess
+This is the most critical attack step with Defense
+Candidate defense node: (4).Disabled.Disable   Total frequency blocked: 12
+Best defense detected: (4).Disabled.Disable
+Budget check ...
+t - 1 (4).Disabled.Disable
+TAG check
+t - 2      Attacker {}
+t - 2      User {}
+t - 2      Identity {}
+t - 2      WinA {}
+t - 3    WinA {}
+MODEL DEF COSTS
+{}
+END DEF COSTS
+{}
+t - 2      SoftwareVulnerability {'Remove': '6'}
+t - 2      Network {}
+t - 2      WinB {}
+t - 2      SoftwareVulnerability {}
+t - 2      Network {'EavesdropDefense': '9'}
+t - 2      LinuxC {}
+t - 2      SoftwareVulnerability {'Remove': '5'}
+t - 2      DataD {'DataNotPresent': '8'}
+t - 13
+Infostring check
+No tag or cost infostring
+(4).LocalAccess
+This is the most critical attack step with Defense
+Candidate defense node: (4).Disabled.Disable   Total frequency blocked: 12
+Best defense detected: (4).Disabled.Disable
+Budget check ...
+t - 1 (4).Disabled.Disable
+TAG check
+t - 2      Attacker {}
+t - 2      User {}
+t - 2      Identity {}
+t - 2      WinA {}
+t - 3    WinA {}
+MODEL DEF COSTS
+{}
+END DEF COSTS
+{}
+t - 2      SoftwareVulnerability {'Remove': '6'}
+t - 2      Network {}
+t - 2      WinB {}
+t - 2      SoftwareVulnerability {}
+t - 2      Network {'EavesdropDefense': '9'}
+t - 2      LinuxC {}
+t - 2      SoftwareVulnerability {'Remove': '5'}
+t - 2      DataD {'DataNotPresent': '8'}
+t - 13
+Infostring check
+No tag or cost infostring
+(4).NetworkConnect
+Defense not available for Attack step: (4).NetworkConnect
+(4).Authenticate
+Defense not available for Attack step: (4).Authenticate
+(4).LocalConnect
+Defense not available for Attack step: (4).LocalConnect
+(3).Assume
+This is the most critical attack step with Defense
+Candidate defense node: (3).Disabled.Disable   Total frequency blocked: 6
+This is the most critical attack step with Defense
+Candidate defense node: (3).TwoFactorAuthentication.Disable   Total frequency blocked: 6
+Best defense detected: (3).Disabled.Disable
+Budget check ...
+t - 1 (3).Disabled.Disable
+TAG check
+t - 2      Attacker {}
+t - 2      User {}
+t - 2      Identity {}
+t - 3    Identity {}
+MODEL DEF COSTS
+{}
+END DEF COSTS
+{}
+t - 2      WinA {}
+t - 2      SoftwareVulnerability {'Remove': '6'}
+t - 2      Network {}
+t - 2      WinB {}
+t - 2      SoftwareVulnerability {}
+t - 2      Network {'EavesdropDefense': '9'}
+t - 2      LinuxC {}
+t - 2      SoftwareVulnerability {'Remove': '5'}
+t - 2      DataD {'DataNotPresent': '8'}
+t - 13
+Infostring check
+No tag or cost infostring
+Best defense detected: (3).TwoFactorAuthentication.Disable
+Budget check ...
+t - 1 (3).TwoFactorAuthentication.Disable
+TAG check
+t - 2      Attacker {}
+t - 2      User {}
+t - 2      Identity {}
+t - 3    Identity {}
+MODEL DEF COSTS
+{}
+END DEF COSTS
+{}
+t - 2      WinA {}
+t - 2      SoftwareVulnerability {'Remove': '6'}
+t - 2      Network {}
+t - 2      WinB {}
+t - 2      SoftwareVulnerability {}
+t - 2      Network {'EavesdropDefense': '9'}
+t - 2      LinuxC {}
+t - 2      SoftwareVulnerability {'Remove': '5'}
+t - 2      DataD {'DataNotPresent': '8'}
+t - 13
+Infostring check
+No tag or cost infostring
+(3).AttemptAssume
+Defense not available for Attack step: (3).AttemptAssume
+(1).EntryPoint
+Defense not available for Attack step: (1).EntryPoint
+(6).Access
+Defense not available for Attack step: (6).Access
+(12).Impact
+Defense not available for Attack step: (12).Impact
+(12).Exploit
+Defense not available for Attack step: (12).Exploit
+(12).ExploitTrivially
+Defense not available for Attack step: (12).ExploitTrivially
+(12).Abuse
+This is the most critical attack step with Defense
+Candidate defense node: (12).Remove.Disable   Total frequency blocked: 4
+This is the most critical attack step with Defense
+Candidate defense node: (11).Disabled.Disable   Total frequency blocked: 4
+Best defense detected: (12).Remove.Disable
+Budget check ...
+t - 1 (12).Remove.Disable
+TAG check
+t - 2      Attacker {}
+t - 2      User {}
+t - 2      Identity {}
+t - 2      WinA {}
+t - 2      SoftwareVulnerability {'Remove': '6'}
+t - 3    SoftwareVulnerability {'Remove': '6'}
+MODEL DEF COSTS
+{'Remove': '6'}
+END DEF COSTS
+{'Remove': '6'}
+MODEL DEF COSTS
+{'Remove': '6'}
+END DEF COSTS
+t - 4 None Remove
+t - 5 None
