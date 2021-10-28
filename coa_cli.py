@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
     svds = lang_meta["assets"]["Network"]["defenses"]
     svr = next((d for d in svds if d["name"] == "EavesdropDefense"), False)
-    svr["metaInfo"]["cost"] = [7, 3]
+    svr["metaInfo"]["cost"] = [7, 5]
     svr["metaInfo"]["cost_time"] = [10, 5]
     print("cost update done")
 

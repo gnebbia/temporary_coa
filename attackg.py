@@ -152,6 +152,8 @@ class AttackGraph(nx.DiGraph):
                                 print("t - 1", best_def)
                             print("TAG check")
                             #print(model_dict_list)
+                            # HERE
+
                             for idx,model_dict in enumerate(model_dict_list):
                                 # print(model_dict)
                                 # print(self.nodes[node])
@@ -263,10 +265,13 @@ class AttackGraph(nx.DiGraph):
                             defense_info = next((d for d in classdefs if d["name"] == self.nodes[node]["attackstep"]), False)
                                 #print(classdefs)
                                 #print(defense_info)
+                            print(">>BEFORE TRY")
                             try:
-                                def_class_cost = json.loads(defense_info["metaInfo"]["cost"])
-                                def_class_cost_time = json.loads(defense_info["metaInfo"]["cost_time"])
+                                print(">>ENTER TRY")
+                                def_class_cost = defense_info["metaInfo"]["cost"]
+                                def_class_cost_time = defense_info["metaInfo"]["cost_time"]
                                 def_name = defense_info["name"]
+                                print(">>ANALYZING ", def_name)
                                 #print("Time cost ", def_class_cost_time)
                                 current_mc = None
                                 current_tc = None
@@ -280,30 +285,38 @@ class AttackGraph(nx.DiGraph):
                                 else:
                                     current_tc = def_class_cost_time[0]
 
-                                if budget_remaining > current_mc:
-                                    if p_test:
-                                        print("t - 14")
-                                    changed_budget = budget_remaining - current_mc
-                                    print("Monetary Cost of defense: ", def_name, "is ", current_mc)
-                                    print("Time Cost of defense: ", def_name, "is ", current_tc)
-                                    print("Apply the defense : AS INFOSTRING COST < BUDGET")
-                                    #print(self.nodes[node])
-                                    return self.nodes[node], changed_budget
-                                else:
-                                    flag = 1
-                                    if p_test:
-                                        print("t - 15")
-                                    print("Cost of defense: ", current_mc)
-                                    print("Out of budget")
-                                    block_range_def[best_def] = 0  # if both costs are high or no cost given
-                                    break
+                                if current_mc:
+                                    if budget_remaining > current_mc:
+                                        print(">>ENTER IF BUDGE_REMAINING > INT(DEF_CLASS_COST FIRST USE)")
+                                        if p_test:
+                                            print("t - 14")
+                                        changed_budget = budget_remaining - current_mc
+                                        print("Monetary Cost of defense: ", def_name, "is ", current_mc)
+                                        print("Time Cost of defense: ", def_name, "is ", current_tc)
+                                        print("Apply the defense : AS INFOSTRING COST < BUDGET")
+                                        #print(self.nodes[node])
+                                        return self.nodes[node], changed_budget
+                                    else:
+                                        print(">>ENTER ELSE BUDGE_REMAINING > INT(DEF_CLASS_COST FIRST USE)")
+                                        flag = 1
+                                        if p_test:
+                                            print("t - 15")
+                                        print("Cost of defense: ", current_mc)
+                                        print("Out of budget")
+                                        block_range_def[best_def] = 0  # if both costs are high or no cost given
+                                        break
                                 #if budget_remaining > int(def_class_cost_time["first_use"]):
                                     #print("Time Cost", def_class_cost_time["first_use"])
-                            except: print("No tag or cost infostring")
+                            except: 
+                                print("No tag or cost infostring")
+                                print(">>OUTSIDE TRY")
                         if flag == 1: #TODO when the defense is out of budget wrt top_attack_step (can be improved - once a defense out of budget it should be removed totally)
+                            print(">>ENTERING WEIRD BREAK")
                             break
+                    print(">>BEFORE BLOCK RANGE DEF")
                     block_range_def[best_def] = 0  # if both costs are high or no cost given
             else:
+                print(">>ENTERING DEFENSE NOT AVAILABLE")
                 print("Defense not available for Attack step:", top_attack_step)
 
             #print("Pred_Node", pred_nodes)
