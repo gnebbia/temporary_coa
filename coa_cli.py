@@ -80,11 +80,11 @@ if __name__ == "__main__":
     models = enterprise.models.Models(client)
     #modelinfo = models.get_model_by_mid(project, "238548676164277")  ################# old
     #modelinfo = models.get_model_by_mid(project, "226155404398940")  #################
-    modelinfo = models.get_model_by_mid(project, "420963146438357") # cost_Model_3
+    #modelinfo = models.get_model_by_mid(project, "420963146438357") # cost_Model_3
     #modelinfo = models.get_model_by_mid(project, "114362693739575") # type-7
     #modelinfo = models.get_model_by_mid(project, "243886861364858")
     #modelinfo = models.get_model_by_mid(project, "244665522116755")  # examplemodel
-    #modelinfo = models.get_model_by_mid(project, "164553780505755")  # simplemodel
+    modelinfo = models.get_model_by_mid(project, "164553780505755")  # simplemodel
     # TODO get the model from simulation id
 
     print("model name  -- ", modelinfo.name)
@@ -209,15 +209,16 @@ if __name__ == "__main__":
             graph.find_critical_attack_step(crit_metric[i])
 
         # try:
-        best_def_info, budget_remaining = graph.find_best_defense(lang_meta, model_dict_list, budget_remaining)
-        if p_test:
-            print(best_def_info)
-        print("BUDGET: ", budget_remaining)
-        # except Exception as e:
-        #     print("EXCEPTION:")
-        #     print(e)
-        #     print("No suitable defense available")
-        #     exit()
+        try:
+            best_def_info, budget_remaining = graph.find_best_defense(lang_meta, model_dict_list, budget_remaining)
+            if p_test:
+                print(best_def_info)
+            print("BUDGET: ", budget_remaining)
+        except Exception as e:
+            print("EXCEPTION:")
+            print(e)
+            print("No suitable defense available")
+            exit()
 
         print("MODEL DICT LIST")
         print(model_dict_list)
