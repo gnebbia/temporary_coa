@@ -126,7 +126,7 @@ class AttackGraph(nx.DiGraph):
             block_range_def = {}
             no_of_def_for_i_node = 0
             pred_nodes = []
-            print(top_attack_step)
+            print("Attack Step:", top_attack_step)
             for pred_node in self.predecessors(top_attack_step):
                 #print("Pred Nodes ", pred_node)
                 pred_nodes.append(pred_node)
@@ -144,31 +144,24 @@ class AttackGraph(nx.DiGraph):
                     #print(key)
                     print("Best defense detected:", best_def)
                     print("Budget check ...")
-                    flag = 0
+                    not_enough_budget = False
                     for node in self.nodes:
                         #print(self.nodes[node]["name"], self.nodes[node]["id"])
                         if self.nodes[node]["id"] == best_def:
                             if p_test:
-                                print("t - 1", best_def)
-                            print("TAG check")
-                            #print(model_dict_list)
-                            # HERE
+                                print("1 - Defense Name: ", best_def)
 
+                            # Checking if user specified cost tags
                             for idx,model_dict in enumerate(model_dict_list):
                                 # print(model_dict)
                                 # print(self.nodes[node])
-                                if p_test:
-                                    print("t - 2     ", model_dict["name"], model_dict["attributesJsonString"])
                                 if self.nodes[node]["name"] == model_dict["name"]:
                                     if p_test:
-                                        print("t - 3   ", self.nodes[node]["name"], model_dict["attributesJsonString"])
+                                        print("Name of the Object and Associated Defense: ", self.nodes[node]["name"], model_dict["attributesJsonString"])
                                     def_costs = model_dict["attributesJsonString"]
-                                    print("MODEL DEF COSTS")
+                                    print("Printing Tag Dictionary")
                                     print(def_costs)
-                                    print("END DEF COSTS")
 
-                                    # Ashish Code
-                    
                                     cost_mc=[]
                                     cost_tc=[]
 
@@ -228,40 +221,32 @@ class AttackGraph(nx.DiGraph):
                                                     print("NOW THE ARRAY TC COST WILL BE:")
                                                     print(model_dict_list[idx]["attributesJsonString"][key])
                                    
-                                        print("MODEL DEF COSTS")
-                                        print(def_costs)
-                                        print("END DEF COSTS")
-
                                         if p_test:
-                                            print("t - 4", this_cost_mc, self.nodes[node]["attackstep"])
-                                            print("t - 5", this_cost_mc)
+                                            print("Monetary Cost: ", this_cost_mc)
                                         # cost_used=def_cost_list_dict[self.nodes[node]["name"]][0][No_of_times_used]
                                         if this_cost_mc:
+                                            print("Cost of defense: ", this_cost_mc)
                                             if budget_remaining > int(this_cost_mc):
                                                 changed_budget = budget_remaining - int(this_cost_mc)
                                                 # Increment defenses as many number of times used
                                                 # def_cost_list_dict[self.nodes[node]["name"]][2] = def_cost_list_dict[self.nodes[node]["name"]][2]+1
-                                                print("Cost of defense: ", this_cost_mc)
                                                 print("Time Cost of defense: ", this_cost_tc)
                                                 # print("Time Cost of defense: ", 10)
                                                 print("Apply the defense : AS TAG COST < BUDGET")
                                                 return self.nodes[node], changed_budget
                                             else:
-                                                flag = 1
-                                                print("Cost of defense: ", this_cost_mc)
+                                                not_enough_budget = True
                                                 print("Out of budget")
                                                 # print(block_range_def[best_def])
                                                 block_range_def[best_def] = 0  # if both costs are high or no cost given
                                                 break
 
-                                if flag == 1:
+                                if not_enough_budget:
                                     break
-                            if flag == 1:
+                            if not_enough_budget:
                                 break
-                            if p_test:
-                                print("t - 13")
                             print(">> SINCE NO USER SPECIFIED TAGS HAVE BEEN FOUND, WE CHECK THE JSON LANGUAGE MODEL")
-                            print("Infostring check")
+                            print("JSON Infostring check")
                             classdefs = meta_lang["assets"][self.nodes[node]["class"]]["defenses"]
                             defense_info = next((d for d in classdefs if d["name"] == self.nodes[node]["attackstep"]), False)
                                 #print(classdefs)
@@ -270,7 +255,8 @@ class AttackGraph(nx.DiGraph):
                                 def_class_cost = defense_info["metaInfo"]["cost"]
                                 def_class_cost_time = defense_info["metaInfo"]["cost_time"]
                                 def_name = defense_info["name"]
-                                print(">>ANALYZING ", def_name)
+                                print(">>I found the defense in the JSON ")
+                                print(">>ANALYZING: ", def_name)
                                 #print("Time cost ", def_class_cost_time)
                                 current_mc = None
                                 current_tc = None
@@ -294,31 +280,26 @@ class AttackGraph(nx.DiGraph):
                                 print(">>MC array for this Defense now is:", def_class_cost)
                                 print(">>TC array for this Defense now is:", def_class_cost_time)
 
-                                if current_mc:
-                                    if budget_remaining > current_mc:
-                                        print(">>ENTER IF BUDGE_REMAINING > INT(DEF_CLASS_COST FIRST USE)")
-                                        if p_test:
-                                            print("t - 14")
-                                        changed_budget = budget_remaining - current_mc
-                                        print("Monetary Cost of defense: ", def_name, "is ", current_mc)
-                                        print("Time Cost of defense: ", def_name, "is ", current_tc)
-                                        print("Apply the defense : AS INFOSTRING COST < BUDGET")
-                                        #print(self.nodes[node])
-                                        return self.nodes[node], changed_budget
-                                    else:
-                                        print(">>ENTER ELSE BUDGE_REMAINING > INT(DEF_CLASS_COST FIRST USE)")
-                                        flag = 1
-                                        if p_test:
-                                            print("t - 15")
-                                        print("Cost of defense: ", current_mc)
-                                        print("Out of budget")
-                                        block_range_def[best_def] = 0  # if both costs are high or no cost given
-                                        break
+                                if budget_remaining > current_mc:
+                                    print(">>AFFORDABLE DEFENSE: REMAINING BUDGET  > MONETARY COST")
+                                    changed_budget = budget_remaining - current_mc
+                                    print("Monetary Cost of defense: ", def_name, "is ", current_mc)
+                                    print("Time Cost of defense: ", def_name, "is ", current_tc)
+                                    print("Apply the defense : AS INFOSTRING COST < BUDGET")
+                                    #print(self.nodes[node])
+                                    return self.nodes[node], changed_budget
+                                else:
+                                    print(">>INSUFFICIENT BUDGET: REMAINING BUDGET  < MONETARY COST")
+                                    not_enough_budget = True
+                                    print("Cost of defense: ", current_mc)
+                                    print("Out of budget")
+                                    block_range_def[best_def] = 0  # if both costs are high or no cost given
+                                    break
                                 #if budget_remaining > int(def_class_cost_time["first_use"]):
                                     #print("Time Cost", def_class_cost_time["first_use"])
                             except: 
                                 print("No tag or cost infostring")
-                        if flag == 1: #TODO when the defense is out of budget wrt top_attack_step (can be improved - once a defense out of budget it should be removed totally)
+                        if not_enough_budget: #TODO when the defense is out of budget wrt top_attack_step (can be improved - once a defense out of budget it should be removed totally)
                             break
                     block_range_def[best_def] = 0  # if both costs are high or no cost given
             else:

@@ -1,8 +1,8 @@
-BUDGET:  20
+BUDGET:  30
 Log in to Enterprise...done
 Obtaining full language metadata cost update done
 Project pid  --  446664605265379
-model name  --  simpleModel
+model name  --  Cost_Model_3
 model downloaded
 model unzipped in  --  data-models/scad_dir
 downloaded model deleted
@@ -10,10 +10,175 @@ scenario cleaning process started ...
 cleaning done
 scenario created
 simulation created
-TTC values for  6.Eavesdrop is [0.0, 5.0, 23.0]
-TTC values for  11.Modify is [0.0, 5.0, 23.0]
-TTC values for  13.Read is [0.0, 5.0, 23.0]
-Steps of interest are:  ['6.Eavesdrop', '11.Modify', '13.Read']
+TTC values for  28.Delete is [0.0, 0.0, 0.0]
+TTC values for  32.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  40.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  45.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  48.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  50.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+Steps of interest are:  ['28.Delete', '32.Eavesdrop', '40.Eavesdrop', '45.Delete', '48.Eavesdrop', '50.Delete']
+critical path fetched
+critical path converted to a graph
+critical path fetched
+critical path converted to a graph
+critical path fetched
+critical path converted to a graph
+critical path fetched
+critical path converted to a graph
+
+Number of graphs sent to Merge -  4
+Change of NetworkX Graph Status
+['(28).Access', '(28).Delete', '(28).DataNotPresent.Disable', '(28).AttemptAccess', '(26).FullAccess', '(26).Authenticate', '(26).NetworkConnect', '(26).Disabled.Disable', '(30).Assume', '(32).Access', '(30).Disabled.Disable', '(30).TwoFactorAuthentication.Disable', '(30).AttemptAssume', '(25).AccessNetworkAndConnections', '(31).Use', '(25).FullAccess', '(27).EntryPoint']
+['(28).Access', '(28).Delete', '(28).DataNotPresent.Disable', '(28).AttemptAccess', '(26).FullAccess', '(26).Authenticate', '(26).NetworkConnect', '(26).Disabled.Disable', '(30).Assume', '(32).Access', '(30).Disabled.Disable', '(30).TwoFactorAuthentication.Disable', '(30).AttemptAssume', '(25).AccessNetworkAndConnections', '(31).Use', '(25).FullAccess', '(27).EntryPoint', '(32).AccessNetworkData', '(32).Eavesdrop', '(32).EavesdropDefense.Disable']
+['(28).Access', '(28).Delete', '(28).DataNotPresent.Disable', '(28).AttemptAccess', '(26).FullAccess', '(26).Authenticate', '(26).NetworkConnect', '(26).Disabled.Disable', '(30).Assume', '(32).Access', '(30).Disabled.Disable', '(30).TwoFactorAuthentication.Disable', '(30).AttemptAssume', '(25).AccessNetworkAndConnections', '(31).Use', '(25).FullAccess', '(27).EntryPoint', '(32).AccessNetworkData', '(32).Eavesdrop', '(32).EavesdropDefense.Disable', '(40).AccessNetworkData', '(40).Eavesdrop', '(40).EavesdropDefense.Disable', '(40).Access', '(43).AccessNetworkAndConnections', '(43).FullAccess']
+['(28).Access', '(28).Delete', '(28).DataNotPresent.Disable', '(28).AttemptAccess', '(26).FullAccess', '(26).Authenticate', '(26).NetworkConnect', '(26).Disabled.Disable', '(30).Assume', '(32).Access', '(30).Disabled.Disable', '(30).TwoFactorAuthentication.Disable', '(30).AttemptAssume', '(25).AccessNetworkAndConnections', '(31).Use', '(25).FullAccess', '(27).EntryPoint', '(32).AccessNetworkData', '(32).Eavesdrop', '(32).EavesdropDefense.Disable', '(40).AccessNetworkData', '(40).Eavesdrop', '(40).EavesdropDefense.Disable', '(40).Access', '(43).AccessNetworkAndConnections', '(43).FullAccess', '(48).AccessNetworkData', '(48).Eavesdrop', '(48).EavesdropDefense.Disable', '(48).Access', '(47).AccessNetworkAndConnections', '(47).FullAccess']
+
+Criticality of Attack steps
+
+Sorted Nodes
+['(27).EntryPoint', '(28).DataNotPresent.Disable', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(28).Access', '(28).AttemptAccess', '(26).FullAccess', '(26).Authenticate', '(26).NetworkConnect', '(26).Disabled.Disable', '(30).Assume', '(30).Disabled.Disable', '(30).TwoFactorAuthentication.Disable', '(30).AttemptAssume', '(31).Use', '(32).AccessNetworkData', '(32).EavesdropDefense.Disable', '(40).AccessNetworkData', '(40).EavesdropDefense.Disable', '(40).Access', '(43).AccessNetworkAndConnections', '(43).FullAccess', '(48).AccessNetworkData', '(48).EavesdropDefense.Disable', '(48).Access', '(47).AccessNetworkAndConnections', '(47).FullAccess', '(28).Delete', '(32).Eavesdrop', '(40).Eavesdrop', '(48).Eavesdrop']
+
+Sorted Nodes with Criticality Scores
+(27).EntryPoint 	 32
+(28).DataNotPresent.Disable 	 31
+(32).Access 	 31
+(25).AccessNetworkAndConnections 	 31
+(25).FullAccess 	 31
+(28).Access 	 30
+(28).AttemptAccess 	 30
+(26).FullAccess 	 30
+(26).Authenticate 	 30
+(26).NetworkConnect 	 30
+(26).Disabled.Disable 	 30
+(30).Assume 	 30
+(30).Disabled.Disable 	 30
+(30).TwoFactorAuthentication.Disable 	 30
+(30).AttemptAssume 	 30
+(31).Use 	 30
+(32).AccessNetworkData 	 30
+(32).EavesdropDefense.Disable 	 30
+(40).AccessNetworkData 	 30
+(40).EavesdropDefense.Disable 	 30
+(40).Access 	 30
+(43).AccessNetworkAndConnections 	 30
+(43).FullAccess 	 30
+(48).AccessNetworkData 	 30
+(48).EavesdropDefense.Disable 	 30
+(48).Access 	 30
+(47).AccessNetworkAndConnections 	 30
+(47).FullAccess 	 30
+(28).Delete 	 29
+(32).Eavesdrop 	 29
+(40).Eavesdrop 	 29
+(48).Eavesdrop 	 29
+
+Criticality of Attack steps
+NODE : (28).Access   Frequency : 1
+NODE : (28).Delete   Frequency : 1
+NODE : (28).AttemptAccess   Frequency : 1
+NODE : (26).FullAccess   Frequency : 1
+NODE : (26).Authenticate   Frequency : 1
+NODE : (26).NetworkConnect   Frequency : 1
+NODE : (30).Assume   Frequency : 1
+NODE : (32).Access   Frequency : 2
+NODE : (30).AttemptAssume   Frequency : 1
+NODE : (25).AccessNetworkAndConnections   Frequency : 2
+NODE : (31).Use   Frequency : 1
+NODE : (25).FullAccess   Frequency : 2
+NODE : (27).EntryPoint   Frequency : 4
+NODE : (32).AccessNetworkData   Frequency : 1
+NODE : (32).Eavesdrop   Frequency : 1
+NODE : (40).AccessNetworkData   Frequency : 1
+NODE : (40).Eavesdrop   Frequency : 1
+NODE : (40).Access   Frequency : 1
+NODE : (43).AccessNetworkAndConnections   Frequency : 1
+NODE : (43).FullAccess   Frequency : 1
+NODE : (48).AccessNetworkData   Frequency : 1
+NODE : (48).Eavesdrop   Frequency : 1
+NODE : (48).Access   Frequency : 1
+NODE : (47).AccessNetworkAndConnections   Frequency : 1
+NODE : (47).FullAccess   Frequency : 1
+
+Sorted Nodes
+['(27).EntryPoint', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(28).Access', '(28).Delete', '(28).AttemptAccess', '(26).FullAccess', '(26).Authenticate', '(26).NetworkConnect', '(30).Assume', '(30).AttemptAssume', '(31).Use', '(32).AccessNetworkData', '(32).Eavesdrop', '(40).AccessNetworkData', '(40).Eavesdrop', '(40).Access', '(43).AccessNetworkAndConnections', '(43).FullAccess', '(48).AccessNetworkData', '(48).Eavesdrop', '(48).Access', '(47).AccessNetworkAndConnections', '(47).FullAccess']
+
+Sorted Nodes with Criticality Scores
+(27).EntryPoint 	 25
+(32).Access 	 24
+(25).AccessNetworkAndConnections 	 24
+(25).FullAccess 	 24
+(28).Access 	 23
+(28).Delete 	 23
+(28).AttemptAccess 	 23
+(26).FullAccess 	 23
+(26).Authenticate 	 23
+(26).NetworkConnect 	 23
+(30).Assume 	 23
+(30).AttemptAssume 	 23
+(31).Use 	 23
+(32).AccessNetworkData 	 23
+(32).Eavesdrop 	 23
+(40).AccessNetworkData 	 23
+(40).Eavesdrop 	 23
+(40).Access 	 23
+(43).AccessNetworkAndConnections 	 23
+(43).FullAccess 	 23
+(48).AccessNetworkData 	 23
+(48).Eavesdrop 	 23
+(48).Access 	 23
+(47).AccessNetworkAndConnections 	 23
+(47).FullAccess 	 23
+
+Analyzing critical attack step to get suitable defense
+Attack Step: (27).EntryPoint
+Defense not available for Attack step: (27).EntryPoint
+Attack Step: (32).Access
+Defense not available for Attack step: (32).Access
+Attack Step: (25).AccessNetworkAndConnections
+Defense not available for Attack step: (25).AccessNetworkAndConnections
+Attack Step: (25).FullAccess
+Defense not available for Attack step: (25).FullAccess
+Attack Step: (28).Access
+This is the most critical attack step with Defense
+Candidate defense node: (28).DataNotPresent.Disable   Total frequency blocked: 2
+Best defense detected: (28).DataNotPresent.Disable
+Budget check ...
+1 - Defense Name:  (28).DataNotPresent.Disable
+Name of the Object and Associated Defense:  Db {'DataNotPresent_tc': '6 3 1', 'DataNotPresent_mc': '7 5 2'}
+Printing Tag Dictionary
+{'DataNotPresent_tc': '6 3 1', 'DataNotPresent_mc': '7 5 2'}
+{'DataNotPresent_tc': '6 3 1', 'DataNotPresent_mc': '7 5 2'}
+TC cost  ['6', '3', '1']
+TC Cost is longer than one element
+This time is using  6
+The joined list is:
+3 1
+NOW THE ARRAY TC COST WILL BE:
+3 1
+Monetary Cost:  None
+MC Cost ['7', '5', '2']
+MC Cost is longer than one element
+This time is using  7
+The joined list is:
+5 2
+NOW THE ARRAY MC COST WILL BE:
+5 2
+Monetary Cost:  7
+Cost of defense:  7
+Time Cost of defense:  6
+Apply the defense : AS TAG COST < BUDGET
+BUDGET:  23
+MODEL DICT LIST
+[{'name': 'WebS', 'metaConcept': 'Application', 'exportedId': '25', 'attributesJsonString': {'Disabled_mc': '20'}}, {'name': 'DbS', 'metaConcept': 'Application', 'exportedId': '26', 'attributesJsonString': {'Disabled_mc': '15'}}, {'name': 'Attacker', 'metaConcept': 'Attacker', 'exportedId': '27', 'attributesJsonString': {}}, {'name': 'Db', 'metaConcept': 'Data', 'exportedId': '28', 'attributesJsonString': {'DataNotPresent_tc': '3 1', 'DataNotPresent_mc': '5 2'}}, {'name': 'SysA', 'metaConcept': 'System', 'exportedId': '29', 'attributesJsonString': {}}, {'name': 'ID', 'metaConcept': 'Identity', 'exportedId': '30', 'attributesJsonString': {'TwoFactorAuthentication_mc': '10 5 3'}}, {'name': 'CredWeb', 'metaConcept': 'Credentials', 'exportedId': '31', 'attributesJsonString': {}}, {'name': 'LAN', 'metaConcept': 'Network', 'exportedId': '32', 'attributesJsonString': {}}, {'name': 'DbInfo', 'metaConcept': 'Information', 'exportedId': '34', 'attributesJsonString': {}}, {'name': 'UserA', 'metaConcept': 'User', 'exportedId': '38', 'attributesJsonString': {}}, {'name': 'SoftwareVulnerability', 'metaConcept': 'SoftwareVulnerability', 'exportedId': '39', 'attributesJsonString': {}}, {'name': 'NetworkA', 'metaConcept': 'Network', 'exportedId': '40', 'attributesJsonString': {'EavesdropDefense_tc': '2 2 2', 'EavesdropDefense_mc': '1 1 1'}}, {'name': 'ApplicationAA', 'metaConcept': 'Application', 'exportedId': '43', 'attributesJsonString': {}}, {'name': 'DbSA', 'metaConcept': 'Application', 'exportedId': '44', 'attributesJsonString': {'Disabled_mc': '15'}}, {'name': 'DataA', 'metaConcept': 'Data', 'exportedId': '45', 'attributesJsonString': {}}, {'name': 'InformationA', 'metaConcept': 'Information', 'exportedId': '46', 'attributesJsonString': {}}, {'name': 'ApplicationAB', 'metaConcept': 'Application', 'exportedId': '47', 'attributesJsonString': {}}, {'name': 'NetworkB', 'metaConcept': 'Network', 'exportedId': '48', 'attributesJsonString': {}}, {'name': 'DbSB', 'metaConcept': 'Application', 'exportedId': '49', 'attributesJsonString': {'Disabled_mc': '15'}}, {'name': 'DataB', 'metaConcept': 'Data', 'exportedId': '50', 'attributesJsonString': {}}, {'name': 'InformationB', 'metaConcept': 'Information', 'exportedId': '51', 'attributesJsonString': {}}]
+END MODEL DICT LIST
+simulation created
+TTC values for  28.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  32.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  40.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  45.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  48.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  50.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+Steps of interest are:  ['28.Delete', '32.Eavesdrop', '40.Eavesdrop', '45.Delete', '48.Eavesdrop', '50.Delete']
 critical path fetched
 critical path converted to a graph
 critical path fetched
@@ -23,589 +188,297 @@ critical path converted to a graph
 
 Number of graphs sent to Merge -  3
 Change of NetworkX Graph Status
-['(6).AccessNetworkData', '(6).Eavesdrop', '(6).EavesdropDefense.Disable', '(6).Access', '(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).NetworkAccess', '(4).LocalAccess', '(4).NetworkConnect', '(4).Authenticate', '(4).Disabled.Disable', '(4).LocalConnect', '(4).NetworkConnectFromReverseTakeover', '(3).Assume', '(4).AttemptNetworkConnectFromReverseTakeover', '(4).AirGapped.Disable', '(3).Disabled.Disable', '(3).TwoFactorAuthentication.Disable', '(3).AttemptAssume', '(2).ReverseTakeover', '(1).EntryPoint', '(2).AttemptReverseTakeover', '(2).PhishUser', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(2).SecurityAwareness.Disable']
-['(6).AccessNetworkData', '(6).Eavesdrop', '(6).EavesdropDefense.Disable', '(6).Access', '(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).NetworkAccess', '(4).LocalAccess', '(4).NetworkConnect', '(4).Authenticate', '(4).Disabled.Disable', '(4).LocalConnect', '(4).NetworkConnectFromReverseTakeover', '(3).Assume', '(4).AttemptNetworkConnectFromReverseTakeover', '(4).AirGapped.Disable', '(3).Disabled.Disable', '(3).TwoFactorAuthentication.Disable', '(3).AttemptAssume', '(2).ReverseTakeover', '(1).EntryPoint', '(2).AttemptReverseTakeover', '(2).PhishUser', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(2).SecurityAwareness.Disable', '(12).Modify', '(11).Modify', '(12).Impact', '(12).Exploit', '(12).ExploitTrivially', '(12).Abuse', '(12).Remove.Disable', '(11).Disabled.Disable', '(11).AttemptUseVulnerability', '(11).NetworkConnect', '(10).Access']
-['(6).AccessNetworkData', '(6).Eavesdrop', '(6).EavesdropDefense.Disable', '(6).Access', '(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).NetworkAccess', '(4).LocalAccess', '(4).NetworkConnect', '(4).Authenticate', '(4).Disabled.Disable', '(4).LocalConnect', '(4).NetworkConnectFromReverseTakeover', '(3).Assume', '(4).AttemptNetworkConnectFromReverseTakeover', '(4).AirGapped.Disable', '(3).Disabled.Disable', '(3).TwoFactorAuthentication.Disable', '(3).AttemptAssume', '(2).ReverseTakeover', '(1).EntryPoint', '(2).AttemptReverseTakeover', '(2).PhishUser', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(2).SecurityAwareness.Disable', '(12).Modify', '(11).Modify', '(12).Impact', '(12).Exploit', '(12).ExploitTrivially', '(12).Abuse', '(12).Remove.Disable', '(11).Disabled.Disable', '(11).AttemptUseVulnerability', '(11).NetworkConnect', '(10).Access', '(13).DataNotPresent.Disable', '(13).Read', '(13).AttemptRead', '(7).Read', '(11).Read', '(9).Read', '(12).Read', '(9).Impact', '(9).Exploit', '(9).ExploitTrivially', '(9).Abuse', '(7).Disabled.Disable', '(9).Remove.Disable', '(7).AttemptUseVulnerability', '(7).NetworkConnect']
+['(32).AccessNetworkData', '(32).Eavesdrop', '(32).EavesdropDefense.Disable', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(27).EntryPoint']
+['(32).AccessNetworkData', '(32).Eavesdrop', '(32).EavesdropDefense.Disable', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(27).EntryPoint', '(40).EavesdropDefense.Disable', '(40).Eavesdrop', '(40).AccessNetworkData', '(40).Access', '(43).AccessNetworkAndConnections', '(43).FullAccess']
+['(32).AccessNetworkData', '(32).Eavesdrop', '(32).EavesdropDefense.Disable', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(27).EntryPoint', '(40).EavesdropDefense.Disable', '(40).Eavesdrop', '(40).AccessNetworkData', '(40).Access', '(43).AccessNetworkAndConnections', '(43).FullAccess', '(48).AccessNetworkData', '(48).Eavesdrop', '(48).EavesdropDefense.Disable', '(48).Access', '(47).AccessNetworkAndConnections', '(47).FullAccess']
 
 Criticality of Attack steps
 
 Sorted Nodes
-['(4).Authenticate', '(4).Disabled.Disable', '(4).NetworkConnectFromReverseTakeover', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(1).EntryPoint', '(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).NetworkAccess', '(4).LocalAccess', '(4).NetworkConnect', '(4).LocalConnect', '(3).Assume', '(3).Disabled.Disable', '(3).TwoFactorAuthentication.Disable', '(3).AttemptAssume', '(6).Access', '(12).Impact', '(12).Exploit', '(12).ExploitTrivially', '(12).Abuse', '(12).Remove.Disable', '(11).Disabled.Disable', '(11).AttemptUseVulnerability', '(11).NetworkConnect', '(10).Access', '(4).AttemptNetworkConnectFromReverseTakeover', '(4).AirGapped.Disable', '(2).ReverseTakeover', '(2).AttemptReverseTakeover', '(2).PhishUser', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(2).SecurityAwareness.Disable', '(6).AccessNetworkData', '(6).EavesdropDefense.Disable', '(12).Modify', '(13).DataNotPresent.Disable', '(13).AttemptRead', '(7).Read', '(11).Read', '(9).Read', '(12).Read', '(9).Impact', '(9).Exploit', '(9).ExploitTrivially', '(9).Abuse', '(7).Disabled.Disable', '(9).Remove.Disable', '(7).AttemptUseVulnerability', '(7).NetworkConnect', '(6).Eavesdrop', '(11).Modify', '(13).Read']
+['(27).EntryPoint', '(32).AccessNetworkData', '(32).EavesdropDefense.Disable', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(40).EavesdropDefense.Disable', '(40).AccessNetworkData', '(40).Access', '(43).AccessNetworkAndConnections', '(43).FullAccess', '(48).AccessNetworkData', '(48).EavesdropDefense.Disable', '(48).Access', '(47).AccessNetworkAndConnections', '(47).FullAccess', '(32).Eavesdrop', '(40).Eavesdrop', '(48).Eavesdrop']
 
 Sorted Nodes with Criticality Scores
-(4).Authenticate 	 53
-(4).Disabled.Disable 	 53
-(4).NetworkConnectFromReverseTakeover 	 53
-(4).AttemptUnsafeUserActivityWithHighPrivileges 	 53
-(1).EntryPoint 	 52
-(4).AccessNetworkAndConnections 	 51
-(4).FullAccess 	 50
-(4).NetworkAccess 	 50
-(4).LocalAccess 	 50
-(4).NetworkConnect 	 50
-(4).LocalConnect 	 50
-(3).Assume 	 50
-(3).Disabled.Disable 	 50
-(3).TwoFactorAuthentication.Disable 	 50
-(3).AttemptAssume 	 50
-(6).Access 	 49
-(12).Impact 	 49
-(12).Exploit 	 49
-(12).ExploitTrivially 	 49
-(12).Abuse 	 49
-(12).Remove.Disable 	 49
-(11).Disabled.Disable 	 49
-(11).AttemptUseVulnerability 	 49
-(11).NetworkConnect 	 49
-(10).Access 	 49
-(4).AttemptNetworkConnectFromReverseTakeover 	 48
-(4).AirGapped.Disable 	 48
-(2).ReverseTakeover 	 48
-(2).AttemptReverseTakeover 	 48
-(2).PhishUser 	 48
-(2).UnsafeUserActivity 	 48
-(2).UnforcedUnsafeUserActivity 	 48
-(2).SecurityAwareness.Disable 	 48
-(6).AccessNetworkData 	 47
-(6).EavesdropDefense.Disable 	 47
-(12).Modify 	 47
-(13).DataNotPresent.Disable 	 47
-(13).AttemptRead 	 47
-(7).Read 	 47
-(11).Read 	 47
-(9).Read 	 47
-(12).Read 	 47
-(9).Impact 	 47
-(9).Exploit 	 47
-(9).ExploitTrivially 	 47
-(9).Abuse 	 47
-(7).Disabled.Disable 	 47
-(9).Remove.Disable 	 47
-(7).AttemptUseVulnerability 	 47
-(7).NetworkConnect 	 47
-(6).Eavesdrop 	 46
-(11).Modify 	 46
-(13).Read 	 46
+(27).EntryPoint 	 19
+(32).AccessNetworkData 	 18
+(32).EavesdropDefense.Disable 	 18
+(32).Access 	 18
+(25).AccessNetworkAndConnections 	 18
+(25).FullAccess 	 18
+(40).EavesdropDefense.Disable 	 18
+(40).AccessNetworkData 	 18
+(40).Access 	 18
+(43).AccessNetworkAndConnections 	 18
+(43).FullAccess 	 18
+(48).AccessNetworkData 	 18
+(48).EavesdropDefense.Disable 	 18
+(48).Access 	 18
+(47).AccessNetworkAndConnections 	 18
+(47).FullAccess 	 18
+(32).Eavesdrop 	 17
+(40).Eavesdrop 	 17
+(48).Eavesdrop 	 17
 
 Criticality of Attack steps
-NODE : (6).AccessNetworkData   Frequency : 2
-NODE : (6).Eavesdrop   Frequency : 2
-NODE : (6).Access   Frequency : 4
-NODE : (4).AccessNetworkAndConnections   Frequency : 6
-NODE : (4).FullAccess   Frequency : 6
-NODE : (4).NetworkAccess   Frequency : 6
-NODE : (4).LocalAccess   Frequency : 6
-NODE : (4).NetworkConnect   Frequency : 6
-NODE : (4).Authenticate   Frequency : 6
-NODE : (4).LocalConnect   Frequency : 6
-NODE : (4).NetworkConnectFromReverseTakeover   Frequency : 3
-NODE : (3).Assume   Frequency : 6
-NODE : (4).AttemptNetworkConnectFromReverseTakeover   Frequency : 3
-NODE : (3).AttemptAssume   Frequency : 6
-NODE : (2).ReverseTakeover   Frequency : 3
-NODE : (1).EntryPoint   Frequency : 6
-NODE : (2).AttemptReverseTakeover   Frequency : 3
-NODE : (2).PhishUser   Frequency : 3
-NODE : (4).AttemptUnsafeUserActivityWithHighPrivileges   Frequency : 3
-NODE : (2).UnsafeUserActivity   Frequency : 3
-NODE : (2).UnforcedUnsafeUserActivity   Frequency : 3
-NODE : (12).Modify   Frequency : 2
-NODE : (11).Modify   Frequency : 2
-NODE : (12).Impact   Frequency : 4
-NODE : (12).Exploit   Frequency : 4
-NODE : (12).ExploitTrivially   Frequency : 4
-NODE : (12).Abuse   Frequency : 4
-NODE : (11).AttemptUseVulnerability   Frequency : 4
-NODE : (11).NetworkConnect   Frequency : 4
-NODE : (10).Access   Frequency : 4
-NODE : (13).Read   Frequency : 2
-NODE : (13).AttemptRead   Frequency : 2
-NODE : (7).Read   Frequency : 2
-NODE : (11).Read   Frequency : 2
-NODE : (9).Read   Frequency : 2
-NODE : (12).Read   Frequency : 2
-NODE : (9).Impact   Frequency : 2
-NODE : (9).Exploit   Frequency : 2
-NODE : (9).ExploitTrivially   Frequency : 2
-NODE : (9).Abuse   Frequency : 2
-NODE : (7).AttemptUseVulnerability   Frequency : 2
-NODE : (7).NetworkConnect   Frequency : 2
+NODE : (32).AccessNetworkData   Frequency : 1
+NODE : (32).Eavesdrop   Frequency : 1
+NODE : (32).Access   Frequency : 1
+NODE : (25).AccessNetworkAndConnections   Frequency : 1
+NODE : (25).FullAccess   Frequency : 1
+NODE : (27).EntryPoint   Frequency : 3
+NODE : (40).Eavesdrop   Frequency : 1
+NODE : (40).AccessNetworkData   Frequency : 1
+NODE : (40).Access   Frequency : 1
+NODE : (43).AccessNetworkAndConnections   Frequency : 1
+NODE : (43).FullAccess   Frequency : 1
+NODE : (48).AccessNetworkData   Frequency : 1
+NODE : (48).Eavesdrop   Frequency : 1
+NODE : (48).Access   Frequency : 1
+NODE : (47).AccessNetworkAndConnections   Frequency : 1
+NODE : (47).FullAccess   Frequency : 1
 
 Sorted Nodes
-['(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).NetworkAccess', '(4).LocalAccess', '(4).NetworkConnect', '(4).Authenticate', '(4).LocalConnect', '(3).Assume', '(3).AttemptAssume', '(1).EntryPoint', '(6).Access', '(12).Impact', '(12).Exploit', '(12).ExploitTrivially', '(12).Abuse', '(11).AttemptUseVulnerability', '(11).NetworkConnect', '(10).Access', '(4).NetworkConnectFromReverseTakeover', '(4).AttemptNetworkConnectFromReverseTakeover', '(2).ReverseTakeover', '(2).AttemptReverseTakeover', '(2).PhishUser', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(6).AccessNetworkData', '(6).Eavesdrop', '(12).Modify', '(11).Modify', '(13).Read', '(13).AttemptRead', '(7).Read', '(11).Read', '(9).Read', '(12).Read', '(9).Impact', '(9).Exploit', '(9).ExploitTrivially', '(9).Abuse', '(7).AttemptUseVulnerability', '(7).NetworkConnect']
+['(27).EntryPoint', '(32).AccessNetworkData', '(32).Eavesdrop', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(40).Eavesdrop', '(40).AccessNetworkData', '(40).Access', '(43).AccessNetworkAndConnections', '(43).FullAccess', '(48).AccessNetworkData', '(48).Eavesdrop', '(48).Access', '(47).AccessNetworkAndConnections', '(47).FullAccess']
 
 Sorted Nodes with Criticality Scores
-(4).AccessNetworkAndConnections 	 42
-(4).FullAccess 	 42
-(4).NetworkAccess 	 42
-(4).LocalAccess 	 42
-(4).NetworkConnect 	 42
-(4).Authenticate 	 42
-(4).LocalConnect 	 42
-(3).Assume 	 42
-(3).AttemptAssume 	 42
-(1).EntryPoint 	 42
-(6).Access 	 41
-(12).Impact 	 41
-(12).Exploit 	 41
-(12).ExploitTrivially 	 41
-(12).Abuse 	 41
-(11).AttemptUseVulnerability 	 41
-(11).NetworkConnect 	 41
-(10).Access 	 41
-(4).NetworkConnectFromReverseTakeover 	 40
-(4).AttemptNetworkConnectFromReverseTakeover 	 40
-(2).ReverseTakeover 	 40
-(2).AttemptReverseTakeover 	 40
-(2).PhishUser 	 40
-(4).AttemptUnsafeUserActivityWithHighPrivileges 	 40
-(2).UnsafeUserActivity 	 40
-(2).UnforcedUnsafeUserActivity 	 40
-(6).AccessNetworkData 	 39
-(6).Eavesdrop 	 39
-(12).Modify 	 39
-(11).Modify 	 39
-(13).Read 	 39
-(13).AttemptRead 	 39
-(7).Read 	 39
-(11).Read 	 39
-(9).Read 	 39
-(12).Read 	 39
-(9).Impact 	 39
-(9).Exploit 	 39
-(9).ExploitTrivially 	 39
-(9).Abuse 	 39
-(7).AttemptUseVulnerability 	 39
-(7).NetworkConnect 	 39
+(27).EntryPoint 	 16
+(32).AccessNetworkData 	 15
+(32).Eavesdrop 	 15
+(32).Access 	 15
+(25).AccessNetworkAndConnections 	 15
+(25).FullAccess 	 15
+(40).Eavesdrop 	 15
+(40).AccessNetworkData 	 15
+(40).Access 	 15
+(43).AccessNetworkAndConnections 	 15
+(43).FullAccess 	 15
+(48).AccessNetworkData 	 15
+(48).Eavesdrop 	 15
+(48).Access 	 15
+(47).AccessNetworkAndConnections 	 15
+(47).FullAccess 	 15
 
 Analyzing critical attack step to get suitable defense
-(4).AccessNetworkAndConnections
-Defense not available for Attack step: (4).AccessNetworkAndConnections
-(4).FullAccess
-Defense not available for Attack step: (4).FullAccess
-(4).NetworkAccess
+Attack Step: (27).EntryPoint
+Defense not available for Attack step: (27).EntryPoint
+Attack Step: (32).AccessNetworkData
+Defense not available for Attack step: (32).AccessNetworkData
+Attack Step: (32).Eavesdrop
 This is the most critical attack step with Defense
-Candidate defense node: (4).Disabled.Disable   Total frequency blocked: 12
-Best defense detected: (4).Disabled.Disable
+Candidate defense node: (32).EavesdropDefense.Disable   Total frequency blocked: 1
+Best defense detected: (32).EavesdropDefense.Disable
 Budget check ...
-t - 1 (4).Disabled.Disable
-TAG check
-t - 2      Attacker {}
-t - 2      User {}
-t - 2      Identity {}
-t - 2      WinA {}
-t - 3    WinA {}
-MODEL DEF COSTS
+1 - Defense Name:  (32).EavesdropDefense.Disable
+Name of the Object and Associated Defense:  LAN {}
+Printing Tag Dictionary
 {}
-END DEF COSTS
 {}
-t - 2      SoftwareVulnerability {'Remove': '6'}
-t - 2      Network {}
-t - 2      WinB {}
-t - 2      SoftwareVulnerability {}
-t - 2      Network {'EavesdropDefense': '9'}
-t - 2      LinuxC {}
-t - 2      SoftwareVulnerability {'Remove': '5'}
-t - 2      DataD {'DataNotPresent': '8'}
-t - 13
 >> SINCE NO USER SPECIFIED TAGS HAVE BEEN FOUND, WE CHECK THE JSON LANGUAGE MODEL
-Infostring check
-No tag or cost infostring
-(4).LocalAccess
-This is the most critical attack step with Defense
-Candidate defense node: (4).Disabled.Disable   Total frequency blocked: 12
-Best defense detected: (4).Disabled.Disable
-Budget check ...
-t - 1 (4).Disabled.Disable
-TAG check
-t - 2      Attacker {}
-t - 2      User {}
-t - 2      Identity {}
-t - 2      WinA {}
-t - 3    WinA {}
-MODEL DEF COSTS
-{}
-END DEF COSTS
-{}
-t - 2      SoftwareVulnerability {'Remove': '6'}
-t - 2      Network {}
-t - 2      WinB {}
-t - 2      SoftwareVulnerability {}
-t - 2      Network {'EavesdropDefense': '9'}
-t - 2      LinuxC {}
-t - 2      SoftwareVulnerability {'Remove': '5'}
-t - 2      DataD {'DataNotPresent': '8'}
-t - 13
->> SINCE NO USER SPECIFIED TAGS HAVE BEEN FOUND, WE CHECK THE JSON LANGUAGE MODEL
-Infostring check
-No tag or cost infostring
-(4).NetworkConnect
-Defense not available for Attack step: (4).NetworkConnect
-(4).Authenticate
-Defense not available for Attack step: (4).Authenticate
-(4).LocalConnect
-Defense not available for Attack step: (4).LocalConnect
-(3).Assume
-This is the most critical attack step with Defense
-Candidate defense node: (3).Disabled.Disable   Total frequency blocked: 6
-This is the most critical attack step with Defense
-Candidate defense node: (3).TwoFactorAuthentication.Disable   Total frequency blocked: 6
-Best defense detected: (3).Disabled.Disable
-Budget check ...
-t - 1 (3).Disabled.Disable
-TAG check
-t - 2      Attacker {}
-t - 2      User {}
-t - 2      Identity {}
-t - 3    Identity {}
-MODEL DEF COSTS
-{}
-END DEF COSTS
-{}
-t - 2      WinA {}
-t - 2      SoftwareVulnerability {'Remove': '6'}
-t - 2      Network {}
-t - 2      WinB {}
-t - 2      SoftwareVulnerability {}
-t - 2      Network {'EavesdropDefense': '9'}
-t - 2      LinuxC {}
-t - 2      SoftwareVulnerability {'Remove': '5'}
-t - 2      DataD {'DataNotPresent': '8'}
-t - 13
->> SINCE NO USER SPECIFIED TAGS HAVE BEEN FOUND, WE CHECK THE JSON LANGUAGE MODEL
-Infostring check
->>ANALYZING  Disabled
->>MC array for this Defense before application is: [20, 10]
->>TC array for this Defense before application is: [15, 10]
->>MC current cost used for this Defense is: 20
->>TC current cost used for this Defense now is: 15
->>MC array for this Defense now is: [10]
->>TC array for this Defense now is: [10]
->>ENTER ELSE BUDGE_REMAINING > INT(DEF_CLASS_COST FIRST USE)
-t - 15
-Cost of defense:  20
-Out of budget
-Best defense detected: (3).TwoFactorAuthentication.Disable
-Budget check ...
-t - 1 (3).TwoFactorAuthentication.Disable
-TAG check
-t - 2      Attacker {}
-t - 2      User {}
-t - 2      Identity {}
-t - 3    Identity {}
-MODEL DEF COSTS
-{}
-END DEF COSTS
-{}
-t - 2      WinA {}
-t - 2      SoftwareVulnerability {'Remove': '6'}
-t - 2      Network {}
-t - 2      WinB {}
-t - 2      SoftwareVulnerability {}
-t - 2      Network {'EavesdropDefense': '9'}
-t - 2      LinuxC {}
-t - 2      SoftwareVulnerability {'Remove': '5'}
-t - 2      DataD {'DataNotPresent': '8'}
-t - 13
->> SINCE NO USER SPECIFIED TAGS HAVE BEEN FOUND, WE CHECK THE JSON LANGUAGE MODEL
-Infostring check
->>ANALYZING  TwoFactorAuthentication
->>MC array for this Defense before application is: [10, 5]
+JSON Infostring check
+>>I found the defense in the JSON 
+>>ANALYZING:  EavesdropDefense
+>>MC array for this Defense before application is: [7, 5]
 >>TC array for this Defense before application is: [10, 5]
->>MC current cost used for this Defense is: 10
+>>MC current cost used for this Defense is: 7
 >>TC current cost used for this Defense now is: 10
 >>MC array for this Defense now is: [5]
 >>TC array for this Defense now is: [5]
->>ENTER IF BUDGE_REMAINING > INT(DEF_CLASS_COST FIRST USE)
-t - 14
-Monetary Cost of defense:  TwoFactorAuthentication is  10
-Time Cost of defense:  TwoFactorAuthentication is  10
+>>AFFORDABLE DEFENSE: REMAINING BUDGET  > MONETARY COST
+Monetary Cost of defense:  EavesdropDefense is  7
+Time Cost of defense:  EavesdropDefense is  10
+Apply the defense : AS INFOSTRING COST < BUDGET
+BUDGET:  16
+MODEL DICT LIST
+[{'name': 'WebS', 'metaConcept': 'Application', 'exportedId': '25', 'attributesJsonString': {'Disabled_mc': '20'}}, {'name': 'DbS', 'metaConcept': 'Application', 'exportedId': '26', 'attributesJsonString': {'Disabled_mc': '15'}}, {'name': 'Attacker', 'metaConcept': 'Attacker', 'exportedId': '27', 'attributesJsonString': {}}, {'name': 'Db', 'metaConcept': 'Data', 'exportedId': '28', 'attributesJsonString': {'DataNotPresent_tc': '3 1', 'DataNotPresent_mc': '5 2'}}, {'name': 'SysA', 'metaConcept': 'System', 'exportedId': '29', 'attributesJsonString': {}}, {'name': 'ID', 'metaConcept': 'Identity', 'exportedId': '30', 'attributesJsonString': {'TwoFactorAuthentication_mc': '10 5 3'}}, {'name': 'CredWeb', 'metaConcept': 'Credentials', 'exportedId': '31', 'attributesJsonString': {}}, {'name': 'LAN', 'metaConcept': 'Network', 'exportedId': '32', 'attributesJsonString': {}}, {'name': 'DbInfo', 'metaConcept': 'Information', 'exportedId': '34', 'attributesJsonString': {}}, {'name': 'UserA', 'metaConcept': 'User', 'exportedId': '38', 'attributesJsonString': {}}, {'name': 'SoftwareVulnerability', 'metaConcept': 'SoftwareVulnerability', 'exportedId': '39', 'attributesJsonString': {}}, {'name': 'NetworkA', 'metaConcept': 'Network', 'exportedId': '40', 'attributesJsonString': {'EavesdropDefense_tc': '2 2 2', 'EavesdropDefense_mc': '1 1 1'}}, {'name': 'ApplicationAA', 'metaConcept': 'Application', 'exportedId': '43', 'attributesJsonString': {}}, {'name': 'DbSA', 'metaConcept': 'Application', 'exportedId': '44', 'attributesJsonString': {'Disabled_mc': '15'}}, {'name': 'DataA', 'metaConcept': 'Data', 'exportedId': '45', 'attributesJsonString': {}}, {'name': 'InformationA', 'metaConcept': 'Information', 'exportedId': '46', 'attributesJsonString': {}}, {'name': 'ApplicationAB', 'metaConcept': 'Application', 'exportedId': '47', 'attributesJsonString': {}}, {'name': 'NetworkB', 'metaConcept': 'Network', 'exportedId': '48', 'attributesJsonString': {}}, {'name': 'DbSB', 'metaConcept': 'Application', 'exportedId': '49', 'attributesJsonString': {'Disabled_mc': '15'}}, {'name': 'DataB', 'metaConcept': 'Data', 'exportedId': '50', 'attributesJsonString': {}}, {'name': 'InformationB', 'metaConcept': 'Information', 'exportedId': '51', 'attributesJsonString': {}}]
+END MODEL DICT LIST
+simulation created
+TTC values for  28.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  32.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  40.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  45.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  48.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  50.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+Steps of interest are:  ['28.Delete', '32.Eavesdrop', '40.Eavesdrop', '45.Delete', '48.Eavesdrop', '50.Delete']
+critical path fetched
+critical path converted to a graph
+critical path fetched
+critical path converted to a graph
+
+Number of graphs sent to Merge -  2
+Change of NetworkX Graph Status
+['(40).AccessNetworkData', '(40).Eavesdrop', '(40).EavesdropDefense.Disable', '(40).Access', '(43).AccessNetworkAndConnections', '(43).FullAccess', '(27).EntryPoint']
+['(40).AccessNetworkData', '(40).Eavesdrop', '(40).EavesdropDefense.Disable', '(40).Access', '(43).AccessNetworkAndConnections', '(43).FullAccess', '(27).EntryPoint', '(48).AccessNetworkData', '(48).Eavesdrop', '(48).EavesdropDefense.Disable', '(48).Access', '(47).AccessNetworkAndConnections', '(47).FullAccess']
+
+Criticality of Attack steps
+
+Sorted Nodes
+['(27).EntryPoint', '(40).AccessNetworkData', '(40).EavesdropDefense.Disable', '(40).Access', '(43).AccessNetworkAndConnections', '(43).FullAccess', '(48).AccessNetworkData', '(48).EavesdropDefense.Disable', '(48).Access', '(47).AccessNetworkAndConnections', '(47).FullAccess', '(40).Eavesdrop', '(48).Eavesdrop']
+
+Sorted Nodes with Criticality Scores
+(27).EntryPoint 	 13
+(40).AccessNetworkData 	 12
+(40).EavesdropDefense.Disable 	 12
+(40).Access 	 12
+(43).AccessNetworkAndConnections 	 12
+(43).FullAccess 	 12
+(48).AccessNetworkData 	 12
+(48).EavesdropDefense.Disable 	 12
+(48).Access 	 12
+(47).AccessNetworkAndConnections 	 12
+(47).FullAccess 	 12
+(40).Eavesdrop 	 11
+(48).Eavesdrop 	 11
+
+Criticality of Attack steps
+NODE : (40).AccessNetworkData   Frequency : 1
+NODE : (40).Eavesdrop   Frequency : 1
+NODE : (40).Access   Frequency : 1
+NODE : (43).AccessNetworkAndConnections   Frequency : 1
+NODE : (43).FullAccess   Frequency : 1
+NODE : (27).EntryPoint   Frequency : 2
+NODE : (48).AccessNetworkData   Frequency : 1
+NODE : (48).Eavesdrop   Frequency : 1
+NODE : (48).Access   Frequency : 1
+NODE : (47).AccessNetworkAndConnections   Frequency : 1
+NODE : (47).FullAccess   Frequency : 1
+
+Sorted Nodes
+['(27).EntryPoint', '(40).AccessNetworkData', '(40).Eavesdrop', '(40).Access', '(43).AccessNetworkAndConnections', '(43).FullAccess', '(48).AccessNetworkData', '(48).Eavesdrop', '(48).Access', '(47).AccessNetworkAndConnections', '(47).FullAccess']
+
+Sorted Nodes with Criticality Scores
+(27).EntryPoint 	 11
+(40).AccessNetworkData 	 10
+(40).Eavesdrop 	 10
+(40).Access 	 10
+(43).AccessNetworkAndConnections 	 10
+(43).FullAccess 	 10
+(48).AccessNetworkData 	 10
+(48).Eavesdrop 	 10
+(48).Access 	 10
+(47).AccessNetworkAndConnections 	 10
+(47).FullAccess 	 10
+
+Analyzing critical attack step to get suitable defense
+Attack Step: (27).EntryPoint
+Defense not available for Attack step: (27).EntryPoint
+Attack Step: (40).AccessNetworkData
+Defense not available for Attack step: (40).AccessNetworkData
+Attack Step: (40).Eavesdrop
+This is the most critical attack step with Defense
+Candidate defense node: (40).EavesdropDefense.Disable   Total frequency blocked: 1
+Best defense detected: (40).EavesdropDefense.Disable
+Budget check ...
+1 - Defense Name:  (40).EavesdropDefense.Disable
+Name of the Object and Associated Defense:  NetworkA {'EavesdropDefense_tc': '2 2 2', 'EavesdropDefense_mc': '1 1 1'}
+Printing Tag Dictionary
+{'EavesdropDefense_tc': '2 2 2', 'EavesdropDefense_mc': '1 1 1'}
+{'EavesdropDefense_tc': '2 2 2', 'EavesdropDefense_mc': '1 1 1'}
+TC cost  ['2', '2', '2']
+TC Cost is longer than one element
+This time is using  2
+The joined list is:
+2 2
+NOW THE ARRAY TC COST WILL BE:
+2 2
+Monetary Cost:  None
+MC Cost ['1', '1', '1']
+MC Cost is longer than one element
+This time is using  1
+The joined list is:
+1 1
+NOW THE ARRAY MC COST WILL BE:
+1 1
+Monetary Cost:  1
+Cost of defense:  1
+Time Cost of defense:  2
+Apply the defense : AS TAG COST < BUDGET
+BUDGET:  15
+MODEL DICT LIST
+[{'name': 'WebS', 'metaConcept': 'Application', 'exportedId': '25', 'attributesJsonString': {'Disabled_mc': '20'}}, {'name': 'DbS', 'metaConcept': 'Application', 'exportedId': '26', 'attributesJsonString': {'Disabled_mc': '15'}}, {'name': 'Attacker', 'metaConcept': 'Attacker', 'exportedId': '27', 'attributesJsonString': {}}, {'name': 'Db', 'metaConcept': 'Data', 'exportedId': '28', 'attributesJsonString': {'DataNotPresent_tc': '3 1', 'DataNotPresent_mc': '5 2'}}, {'name': 'SysA', 'metaConcept': 'System', 'exportedId': '29', 'attributesJsonString': {}}, {'name': 'ID', 'metaConcept': 'Identity', 'exportedId': '30', 'attributesJsonString': {'TwoFactorAuthentication_mc': '10 5 3'}}, {'name': 'CredWeb', 'metaConcept': 'Credentials', 'exportedId': '31', 'attributesJsonString': {}}, {'name': 'LAN', 'metaConcept': 'Network', 'exportedId': '32', 'attributesJsonString': {}}, {'name': 'DbInfo', 'metaConcept': 'Information', 'exportedId': '34', 'attributesJsonString': {}}, {'name': 'UserA', 'metaConcept': 'User', 'exportedId': '38', 'attributesJsonString': {}}, {'name': 'SoftwareVulnerability', 'metaConcept': 'SoftwareVulnerability', 'exportedId': '39', 'attributesJsonString': {}}, {'name': 'NetworkA', 'metaConcept': 'Network', 'exportedId': '40', 'attributesJsonString': {'EavesdropDefense_tc': '2 2', 'EavesdropDefense_mc': '1 1'}}, {'name': 'ApplicationAA', 'metaConcept': 'Application', 'exportedId': '43', 'attributesJsonString': {}}, {'name': 'DbSA', 'metaConcept': 'Application', 'exportedId': '44', 'attributesJsonString': {'Disabled_mc': '15'}}, {'name': 'DataA', 'metaConcept': 'Data', 'exportedId': '45', 'attributesJsonString': {}}, {'name': 'InformationA', 'metaConcept': 'Information', 'exportedId': '46', 'attributesJsonString': {}}, {'name': 'ApplicationAB', 'metaConcept': 'Application', 'exportedId': '47', 'attributesJsonString': {}}, {'name': 'NetworkB', 'metaConcept': 'Network', 'exportedId': '48', 'attributesJsonString': {}}, {'name': 'DbSB', 'metaConcept': 'Application', 'exportedId': '49', 'attributesJsonString': {'Disabled_mc': '15'}}, {'name': 'DataB', 'metaConcept': 'Data', 'exportedId': '50', 'attributesJsonString': {}}, {'name': 'InformationB', 'metaConcept': 'Information', 'exportedId': '51', 'attributesJsonString': {}}]
+END MODEL DICT LIST
+simulation created
+TTC values for  28.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  32.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  40.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  45.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  48.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  50.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+Steps of interest are:  ['28.Delete', '32.Eavesdrop', '40.Eavesdrop', '45.Delete', '48.Eavesdrop', '50.Delete']
+critical path fetched
+critical path converted to a graph
+
+Number of graphs sent to Merge -  1
+Change of NetworkX Graph Status
+['(48).AccessNetworkData', '(48).Eavesdrop', '(48).EavesdropDefense.Disable', '(48).Access', '(47).AccessNetworkAndConnections', '(47).FullAccess', '(27).EntryPoint']
+
+Criticality of Attack steps
+
+Sorted Nodes
+['(48).AccessNetworkData', '(48).EavesdropDefense.Disable', '(48).Access', '(47).AccessNetworkAndConnections', '(47).FullAccess', '(27).EntryPoint', '(48).Eavesdrop']
+
+Sorted Nodes with Criticality Scores
+(48).AccessNetworkData 	 7
+(48).EavesdropDefense.Disable 	 7
+(48).Access 	 7
+(47).AccessNetworkAndConnections 	 7
+(47).FullAccess 	 7
+(27).EntryPoint 	 7
+(48).Eavesdrop 	 6
+
+Criticality of Attack steps
+NODE : (48).AccessNetworkData   Frequency : 1
+NODE : (48).Eavesdrop   Frequency : 1
+NODE : (48).Access   Frequency : 1
+NODE : (47).AccessNetworkAndConnections   Frequency : 1
+NODE : (47).FullAccess   Frequency : 1
+NODE : (27).EntryPoint   Frequency : 1
+
+Sorted Nodes
+['(48).AccessNetworkData', '(48).Eavesdrop', '(48).Access', '(47).AccessNetworkAndConnections', '(47).FullAccess', '(27).EntryPoint']
+
+Sorted Nodes with Criticality Scores
+(48).AccessNetworkData 	 6
+(48).Eavesdrop 	 6
+(48).Access 	 6
+(47).AccessNetworkAndConnections 	 6
+(47).FullAccess 	 6
+(27).EntryPoint 	 6
+
+Analyzing critical attack step to get suitable defense
+Attack Step: (48).AccessNetworkData
+Defense not available for Attack step: (48).AccessNetworkData
+Attack Step: (48).Eavesdrop
+This is the most critical attack step with Defense
+Candidate defense node: (48).EavesdropDefense.Disable   Total frequency blocked: 1
+Best defense detected: (48).EavesdropDefense.Disable
+Budget check ...
+1 - Defense Name:  (48).EavesdropDefense.Disable
+Name of the Object and Associated Defense:  NetworkB {}
+Printing Tag Dictionary
+{}
+{}
+>> SINCE NO USER SPECIFIED TAGS HAVE BEEN FOUND, WE CHECK THE JSON LANGUAGE MODEL
+JSON Infostring check
+>>I found the defense in the JSON 
+>>ANALYZING:  EavesdropDefense
+>>MC array for this Defense before application is: [5]
+>>TC array for this Defense before application is: [5]
+>>MC current cost used for this Defense is: 5
+>>TC current cost used for this Defense now is: 5
+>>MC array for this Defense now is: [5]
+>>TC array for this Defense now is: [5]
+>>AFFORDABLE DEFENSE: REMAINING BUDGET  > MONETARY COST
+Monetary Cost of defense:  EavesdropDefense is  5
+Time Cost of defense:  EavesdropDefense is  5
 Apply the defense : AS INFOSTRING COST < BUDGET
 BUDGET:  10
 MODEL DICT LIST
-[{'name': 'Attacker', 'metaConcept': 'Attacker', 'exportedId': '1', 'attributesJsonString': {}}, {'name': 'User', 'metaConcept': 'User', 'exportedId': '2', 'attributesJsonString': {}}, {'name': 'Identity', 'metaConcept': 'Identity', 'exportedId': '3', 'attributesJsonString': {}}, {'name': 'WinA', 'metaConcept': 'Application', 'exportedId': '4', 'attributesJsonString': {}}, {'name': 'SoftwareVulnerability', 'metaConcept': 'SoftwareVulnerability', 'exportedId': '5', 'attributesJsonString': {'Remove': '6'}}, {'name': 'Network', 'metaConcept': 'Network', 'exportedId': '6', 'attributesJsonString': {}}, {'name': 'WinB', 'metaConcept': 'Application', 'exportedId': '7', 'attributesJsonString': {}}, {'name': 'SoftwareVulnerability', 'metaConcept': 'SoftwareVulnerability', 'exportedId': '9', 'attributesJsonString': {}}, {'name': 'Network', 'metaConcept': 'Network', 'exportedId': '10', 'attributesJsonString': {'EavesdropDefense': '9'}}, {'name': 'LinuxC', 'metaConcept': 'Application', 'exportedId': '11', 'attributesJsonString': {}}, {'name': 'SoftwareVulnerability', 'metaConcept': 'SoftwareVulnerability', 'exportedId': '12', 'attributesJsonString': {'Remove': '5'}}, {'name': 'DataD', 'metaConcept': 'Data', 'exportedId': '13', 'attributesJsonString': {'DataNotPresent': '8'}}]
+[{'name': 'WebS', 'metaConcept': 'Application', 'exportedId': '25', 'attributesJsonString': {'Disabled_mc': '20'}}, {'name': 'DbS', 'metaConcept': 'Application', 'exportedId': '26', 'attributesJsonString': {'Disabled_mc': '15'}}, {'name': 'Attacker', 'metaConcept': 'Attacker', 'exportedId': '27', 'attributesJsonString': {}}, {'name': 'Db', 'metaConcept': 'Data', 'exportedId': '28', 'attributesJsonString': {'DataNotPresent_tc': '3 1', 'DataNotPresent_mc': '5 2'}}, {'name': 'SysA', 'metaConcept': 'System', 'exportedId': '29', 'attributesJsonString': {}}, {'name': 'ID', 'metaConcept': 'Identity', 'exportedId': '30', 'attributesJsonString': {'TwoFactorAuthentication_mc': '10 5 3'}}, {'name': 'CredWeb', 'metaConcept': 'Credentials', 'exportedId': '31', 'attributesJsonString': {}}, {'name': 'LAN', 'metaConcept': 'Network', 'exportedId': '32', 'attributesJsonString': {}}, {'name': 'DbInfo', 'metaConcept': 'Information', 'exportedId': '34', 'attributesJsonString': {}}, {'name': 'UserA', 'metaConcept': 'User', 'exportedId': '38', 'attributesJsonString': {}}, {'name': 'SoftwareVulnerability', 'metaConcept': 'SoftwareVulnerability', 'exportedId': '39', 'attributesJsonString': {}}, {'name': 'NetworkA', 'metaConcept': 'Network', 'exportedId': '40', 'attributesJsonString': {'EavesdropDefense_tc': '2 2', 'EavesdropDefense_mc': '1 1'}}, {'name': 'ApplicationAA', 'metaConcept': 'Application', 'exportedId': '43', 'attributesJsonString': {}}, {'name': 'DbSA', 'metaConcept': 'Application', 'exportedId': '44', 'attributesJsonString': {'Disabled_mc': '15'}}, {'name': 'DataA', 'metaConcept': 'Data', 'exportedId': '45', 'attributesJsonString': {}}, {'name': 'InformationA', 'metaConcept': 'Information', 'exportedId': '46', 'attributesJsonString': {}}, {'name': 'ApplicationAB', 'metaConcept': 'Application', 'exportedId': '47', 'attributesJsonString': {}}, {'name': 'NetworkB', 'metaConcept': 'Network', 'exportedId': '48', 'attributesJsonString': {}}, {'name': 'DbSB', 'metaConcept': 'Application', 'exportedId': '49', 'attributesJsonString': {'Disabled_mc': '15'}}, {'name': 'DataB', 'metaConcept': 'Data', 'exportedId': '50', 'attributesJsonString': {}}, {'name': 'InformationB', 'metaConcept': 'Information', 'exportedId': '51', 'attributesJsonString': {}}]
 END MODEL DICT LIST
 simulation created
-TTC values for  6.Eavesdrop is [0.0, 5.0, 23.0]
-TTC values for  11.Modify is [0.0, 5.0, 23.0]
-TTC values for  13.Read is [0.0, 5.0, 23.0]
-Steps of interest are:  ['6.Eavesdrop', '11.Modify', '13.Read']
-critical path fetched
-critical path converted to a graph
-critical path fetched
-critical path converted to a graph
-critical path fetched
-critical path converted to a graph
-
-Number of graphs sent to Merge -  3
-Change of NetworkX Graph Status
-['(6).AccessNetworkData', '(6).Eavesdrop', '(6).EavesdropDefense.Disable', '(6).Access', '(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).Modify', '(5).Modify', '(5).Impact', '(5).Exploit', '(5).ExploitTrivially', '(5).Abuse', '(1).EntryPoint', '(4).Disabled.Disable', '(4).AttemptUseVulnerability', '(5).Remove.Disable', '(4).NetworkConnect', '(4).LocalConnect', '(4).NetworkConnectFromReverseTakeover', '(4).AirGapped.Disable', '(4).AttemptNetworkConnectFromReverseTakeover', '(2).ReverseTakeover', '(2).AttemptReverseTakeover', '(2).PhishUser', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(2).SecurityAwareness.Disable']
-['(6).AccessNetworkData', '(6).Eavesdrop', '(6).EavesdropDefense.Disable', '(6).Access', '(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).Modify', '(5).Modify', '(5).Impact', '(5).Exploit', '(5).ExploitTrivially', '(5).Abuse', '(1).EntryPoint', '(4).Disabled.Disable', '(4).AttemptUseVulnerability', '(5).Remove.Disable', '(4).NetworkConnect', '(4).LocalConnect', '(4).NetworkConnectFromReverseTakeover', '(4).AirGapped.Disable', '(4).AttemptNetworkConnectFromReverseTakeover', '(2).ReverseTakeover', '(2).AttemptReverseTakeover', '(2).PhishUser', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(2).SecurityAwareness.Disable', '(12).Modify', '(11).Modify', '(12).Impact', '(12).Exploit', '(12).ExploitTrivially', '(12).Abuse', '(11).Disabled.Disable', '(12).Remove.Disable', '(11).AttemptUseVulnerability', '(11).NetworkConnect', '(10).Access']
-['(6).AccessNetworkData', '(6).Eavesdrop', '(6).EavesdropDefense.Disable', '(6).Access', '(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).Modify', '(5).Modify', '(5).Impact', '(5).Exploit', '(5).ExploitTrivially', '(5).Abuse', '(1).EntryPoint', '(4).Disabled.Disable', '(4).AttemptUseVulnerability', '(5).Remove.Disable', '(4).NetworkConnect', '(4).LocalConnect', '(4).NetworkConnectFromReverseTakeover', '(4).AirGapped.Disable', '(4).AttemptNetworkConnectFromReverseTakeover', '(2).ReverseTakeover', '(2).AttemptReverseTakeover', '(2).PhishUser', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(2).SecurityAwareness.Disable', '(12).Modify', '(11).Modify', '(12).Impact', '(12).Exploit', '(12).ExploitTrivially', '(12).Abuse', '(11).Disabled.Disable', '(12).Remove.Disable', '(11).AttemptUseVulnerability', '(11).NetworkConnect', '(10).Access', '(13).DataNotPresent.Disable', '(13).Read', '(13).AttemptRead', '(7).Read', '(11).Read', '(9).Read', '(12).Read', '(9).Impact', '(9).Exploit', '(9).ExploitTrivially', '(9).Abuse', '(7).Disabled.Disable', '(7).AttemptUseVulnerability', '(9).Remove.Disable', '(7).NetworkConnect']
-
-Criticality of Attack steps
-
-Sorted Nodes
-['(4).NetworkConnectFromReverseTakeover', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(1).EntryPoint', '(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).Modify', '(5).Modify', '(5).Impact', '(5).Exploit', '(5).ExploitTrivially', '(5).Abuse', '(4).Disabled.Disable', '(4).AttemptUseVulnerability', '(5).Remove.Disable', '(4).NetworkConnect', '(4).LocalConnect', '(6).Access', '(12).Impact', '(12).Exploit', '(12).ExploitTrivially', '(12).Abuse', '(11).Disabled.Disable', '(12).Remove.Disable', '(11).AttemptUseVulnerability', '(11).NetworkConnect', '(10).Access', '(4).AirGapped.Disable', '(4).AttemptNetworkConnectFromReverseTakeover', '(2).ReverseTakeover', '(2).AttemptReverseTakeover', '(2).PhishUser', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(2).SecurityAwareness.Disable', '(6).AccessNetworkData', '(6).EavesdropDefense.Disable', '(12).Modify', '(13).DataNotPresent.Disable', '(13).AttemptRead', '(7).Read', '(11).Read', '(9).Read', '(12).Read', '(9).Impact', '(9).Exploit', '(9).ExploitTrivially', '(9).Abuse', '(7).Disabled.Disable', '(7).AttemptUseVulnerability', '(9).Remove.Disable', '(7).NetworkConnect', '(6).Eavesdrop', '(11).Modify', '(13).Read']
-
-Sorted Nodes with Criticality Scores
-(4).NetworkConnectFromReverseTakeover 	 54
-(4).AttemptUnsafeUserActivityWithHighPrivileges 	 54
-(1).EntryPoint 	 53
-(4).AccessNetworkAndConnections 	 52
-(4).FullAccess 	 51
-(4).Modify 	 51
-(5).Modify 	 51
-(5).Impact 	 51
-(5).Exploit 	 51
-(5).ExploitTrivially 	 51
-(5).Abuse 	 51
-(4).Disabled.Disable 	 51
-(4).AttemptUseVulnerability 	 51
-(5).Remove.Disable 	 51
-(4).NetworkConnect 	 51
-(4).LocalConnect 	 51
-(6).Access 	 50
-(12).Impact 	 50
-(12).Exploit 	 50
-(12).ExploitTrivially 	 50
-(12).Abuse 	 50
-(11).Disabled.Disable 	 50
-(12).Remove.Disable 	 50
-(11).AttemptUseVulnerability 	 50
-(11).NetworkConnect 	 50
-(10).Access 	 50
-(4).AirGapped.Disable 	 49
-(4).AttemptNetworkConnectFromReverseTakeover 	 49
-(2).ReverseTakeover 	 49
-(2).AttemptReverseTakeover 	 49
-(2).PhishUser 	 49
-(2).UnsafeUserActivity 	 49
-(2).UnforcedUnsafeUserActivity 	 49
-(2).SecurityAwareness.Disable 	 49
-(6).AccessNetworkData 	 48
-(6).EavesdropDefense.Disable 	 48
-(12).Modify 	 48
-(13).DataNotPresent.Disable 	 48
-(13).AttemptRead 	 48
-(7).Read 	 48
-(11).Read 	 48
-(9).Read 	 48
-(12).Read 	 48
-(9).Impact 	 48
-(9).Exploit 	 48
-(9).ExploitTrivially 	 48
-(9).Abuse 	 48
-(7).Disabled.Disable 	 48
-(7).AttemptUseVulnerability 	 48
-(9).Remove.Disable 	 48
-(7).NetworkConnect 	 48
-(6).Eavesdrop 	 47
-(11).Modify 	 47
-(13).Read 	 47
-
-Criticality of Attack steps
-NODE : (6).AccessNetworkData   Frequency : 2
-NODE : (6).Eavesdrop   Frequency : 2
-NODE : (6).Access   Frequency : 4
-NODE : (4).AccessNetworkAndConnections   Frequency : 6
-NODE : (4).FullAccess   Frequency : 6
-NODE : (4).Modify   Frequency : 6
-NODE : (5).Modify   Frequency : 6
-NODE : (5).Impact   Frequency : 6
-NODE : (5).Exploit   Frequency : 6
-NODE : (5).ExploitTrivially   Frequency : 6
-NODE : (5).Abuse   Frequency : 6
-NODE : (1).EntryPoint   Frequency : 6
-NODE : (4).AttemptUseVulnerability   Frequency : 6
-NODE : (4).NetworkConnect   Frequency : 6
-NODE : (4).LocalConnect   Frequency : 6
-NODE : (4).NetworkConnectFromReverseTakeover   Frequency : 3
-NODE : (4).AttemptNetworkConnectFromReverseTakeover   Frequency : 3
-NODE : (2).ReverseTakeover   Frequency : 3
-NODE : (2).AttemptReverseTakeover   Frequency : 3
-NODE : (2).PhishUser   Frequency : 3
-NODE : (4).AttemptUnsafeUserActivityWithHighPrivileges   Frequency : 3
-NODE : (2).UnsafeUserActivity   Frequency : 3
-NODE : (2).UnforcedUnsafeUserActivity   Frequency : 3
-NODE : (12).Modify   Frequency : 2
-NODE : (11).Modify   Frequency : 2
-NODE : (12).Impact   Frequency : 4
-NODE : (12).Exploit   Frequency : 4
-NODE : (12).ExploitTrivially   Frequency : 4
-NODE : (12).Abuse   Frequency : 4
-NODE : (11).AttemptUseVulnerability   Frequency : 4
-NODE : (11).NetworkConnect   Frequency : 4
-NODE : (10).Access   Frequency : 4
-NODE : (13).Read   Frequency : 2
-NODE : (13).AttemptRead   Frequency : 2
-NODE : (7).Read   Frequency : 2
-NODE : (11).Read   Frequency : 2
-NODE : (9).Read   Frequency : 2
-NODE : (12).Read   Frequency : 2
-NODE : (9).Impact   Frequency : 2
-NODE : (9).Exploit   Frequency : 2
-NODE : (9).ExploitTrivially   Frequency : 2
-NODE : (9).Abuse   Frequency : 2
-NODE : (7).AttemptUseVulnerability   Frequency : 2
-NODE : (7).NetworkConnect   Frequency : 2
-
-Sorted Nodes
-['(4).AccessNetworkAndConnections', '(4).FullAccess', '(4).Modify', '(5).Modify', '(5).Impact', '(5).Exploit', '(5).ExploitTrivially', '(5).Abuse', '(1).EntryPoint', '(4).AttemptUseVulnerability', '(4).NetworkConnect', '(4).LocalConnect', '(6).Access', '(12).Impact', '(12).Exploit', '(12).ExploitTrivially', '(12).Abuse', '(11).AttemptUseVulnerability', '(11).NetworkConnect', '(10).Access', '(4).NetworkConnectFromReverseTakeover', '(4).AttemptNetworkConnectFromReverseTakeover', '(2).ReverseTakeover', '(2).AttemptReverseTakeover', '(2).PhishUser', '(4).AttemptUnsafeUserActivityWithHighPrivileges', '(2).UnsafeUserActivity', '(2).UnforcedUnsafeUserActivity', '(6).AccessNetworkData', '(6).Eavesdrop', '(12).Modify', '(11).Modify', '(13).Read', '(13).AttemptRead', '(7).Read', '(11).Read', '(9).Read', '(12).Read', '(9).Impact', '(9).Exploit', '(9).ExploitTrivially', '(9).Abuse', '(7).AttemptUseVulnerability', '(7).NetworkConnect']
-
-Sorted Nodes with Criticality Scores
-(4).AccessNetworkAndConnections 	 44
-(4).FullAccess 	 44
-(4).Modify 	 44
-(5).Modify 	 44
-(5).Impact 	 44
-(5).Exploit 	 44
-(5).ExploitTrivially 	 44
-(5).Abuse 	 44
-(1).EntryPoint 	 44
-(4).AttemptUseVulnerability 	 44
-(4).NetworkConnect 	 44
-(4).LocalConnect 	 44
-(6).Access 	 43
-(12).Impact 	 43
-(12).Exploit 	 43
-(12).ExploitTrivially 	 43
-(12).Abuse 	 43
-(11).AttemptUseVulnerability 	 43
-(11).NetworkConnect 	 43
-(10).Access 	 43
-(4).NetworkConnectFromReverseTakeover 	 42
-(4).AttemptNetworkConnectFromReverseTakeover 	 42
-(2).ReverseTakeover 	 42
-(2).AttemptReverseTakeover 	 42
-(2).PhishUser 	 42
-(4).AttemptUnsafeUserActivityWithHighPrivileges 	 42
-(2).UnsafeUserActivity 	 42
-(2).UnforcedUnsafeUserActivity 	 42
-(6).AccessNetworkData 	 41
-(6).Eavesdrop 	 41
-(12).Modify 	 41
-(11).Modify 	 41
-(13).Read 	 41
-(13).AttemptRead 	 41
-(7).Read 	 41
-(11).Read 	 41
-(9).Read 	 41
-(12).Read 	 41
-(9).Impact 	 41
-(9).Exploit 	 41
-(9).ExploitTrivially 	 41
-(9).Abuse 	 41
-(7).AttemptUseVulnerability 	 41
-(7).NetworkConnect 	 41
-
-Analyzing critical attack step to get suitable defense
-(4).AccessNetworkAndConnections
-Defense not available for Attack step: (4).AccessNetworkAndConnections
-(4).FullAccess
-Defense not available for Attack step: (4).FullAccess
-(4).Modify
-Defense not available for Attack step: (4).Modify
-(5).Modify
-Defense not available for Attack step: (5).Modify
-(5).Impact
-Defense not available for Attack step: (5).Impact
-(5).Exploit
-Defense not available for Attack step: (5).Exploit
-(5).ExploitTrivially
-Defense not available for Attack step: (5).ExploitTrivially
-(5).Abuse
-This is the most critical attack step with Defense
-Candidate defense node: (4).Disabled.Disable   Total frequency blocked: 6
-This is the most critical attack step with Defense
-Candidate defense node: (5).Remove.Disable   Total frequency blocked: 6
-Best defense detected: (4).Disabled.Disable
-Budget check ...
-t - 1 (4).Disabled.Disable
-TAG check
-t - 2      Attacker {}
-t - 2      User {}
-t - 2      Identity {}
-t - 2      WinA {}
-t - 3    WinA {}
-MODEL DEF COSTS
-{}
-END DEF COSTS
-{}
-t - 2      SoftwareVulnerability {'Remove': '6'}
-t - 2      Network {}
-t - 2      WinB {}
-t - 2      SoftwareVulnerability {}
-t - 2      Network {'EavesdropDefense': '9'}
-t - 2      LinuxC {}
-t - 2      SoftwareVulnerability {'Remove': '5'}
-t - 2      DataD {'DataNotPresent': '8'}
-t - 13
->> SINCE NO USER SPECIFIED TAGS HAVE BEEN FOUND, WE CHECK THE JSON LANGUAGE MODEL
-Infostring check
-No tag or cost infostring
-Best defense detected: (5).Remove.Disable
-Budget check ...
-t - 1 (5).Remove.Disable
-TAG check
-t - 2      Attacker {}
-t - 2      User {}
-t - 2      Identity {}
-t - 2      WinA {}
-t - 2      SoftwareVulnerability {'Remove': '6'}
-t - 3    SoftwareVulnerability {'Remove': '6'}
-MODEL DEF COSTS
-{'Remove': '6'}
-END DEF COSTS
-{'Remove': '6'}
-MODEL DEF COSTS
-{'Remove': '6'}
-END DEF COSTS
-t - 4 None Remove
-t - 5 None
-t - 2      Network {}
-t - 2      WinB {}
-t - 2      SoftwareVulnerability {}
-t - 3    SoftwareVulnerability {}
-MODEL DEF COSTS
-{}
-END DEF COSTS
-{}
-t - 2      Network {'EavesdropDefense': '9'}
-t - 2      LinuxC {}
-t - 2      SoftwareVulnerability {'Remove': '5'}
-t - 3    SoftwareVulnerability {'Remove': '5'}
-MODEL DEF COSTS
-{'Remove': '5'}
-END DEF COSTS
-{'Remove': '5'}
-MODEL DEF COSTS
-{'Remove': '5'}
-END DEF COSTS
-t - 4 None Remove
-t - 5 None
-t - 2      DataD {'DataNotPresent': '8'}
-t - 13
->> SINCE NO USER SPECIFIED TAGS HAVE BEEN FOUND, WE CHECK THE JSON LANGUAGE MODEL
-Infostring check
->>ANALYZING  Remove
->>MC array for this Defense before application is: [5, 3]
->>TC array for this Defense before application is: [10, 5]
->>MC current cost used for this Defense is: 5
->>TC current cost used for this Defense now is: 10
->>MC array for this Defense now is: [3]
->>TC array for this Defense now is: [5]
->>ENTER IF BUDGE_REMAINING > INT(DEF_CLASS_COST FIRST USE)
-t - 14
-Monetary Cost of defense:  Remove is  5
-Time Cost of defense:  Remove is  10
-Apply the defense : AS INFOSTRING COST < BUDGET
-BUDGET:  5
-MODEL DICT LIST
-[{'name': 'Attacker', 'metaConcept': 'Attacker', 'exportedId': '1', 'attributesJsonString': {}}, {'name': 'User', 'metaConcept': 'User', 'exportedId': '2', 'attributesJsonString': {}}, {'name': 'Identity', 'metaConcept': 'Identity', 'exportedId': '3', 'attributesJsonString': {}}, {'name': 'WinA', 'metaConcept': 'Application', 'exportedId': '4', 'attributesJsonString': {}}, {'name': 'SoftwareVulnerability', 'metaConcept': 'SoftwareVulnerability', 'exportedId': '5', 'attributesJsonString': {'Remove': '6'}}, {'name': 'Network', 'metaConcept': 'Network', 'exportedId': '6', 'attributesJsonString': {}}, {'name': 'WinB', 'metaConcept': 'Application', 'exportedId': '7', 'attributesJsonString': {}}, {'name': 'SoftwareVulnerability', 'metaConcept': 'SoftwareVulnerability', 'exportedId': '9', 'attributesJsonString': {}}, {'name': 'Network', 'metaConcept': 'Network', 'exportedId': '10', 'attributesJsonString': {'EavesdropDefense': '9'}}, {'name': 'LinuxC', 'metaConcept': 'Application', 'exportedId': '11', 'attributesJsonString': {}}, {'name': 'SoftwareVulnerability', 'metaConcept': 'SoftwareVulnerability', 'exportedId': '12', 'attributesJsonString': {'Remove': '5'}}, {'name': 'DataD', 'metaConcept': 'Data', 'exportedId': '13', 'attributesJsonString': {'DataNotPresent': '8'}}]
-END MODEL DICT LIST
-simulation created
-TTC values for  6.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
-TTC values for  11.Modify is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
-TTC values for  13.Read is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
-Steps of interest are:  ['6.Eavesdrop', '11.Modify', '13.Read']
+TTC values for  28.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  32.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  40.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  45.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  48.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  50.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+Steps of interest are:  ['28.Delete', '32.Eavesdrop', '40.Eavesdrop', '45.Delete', '48.Eavesdrop', '50.Delete']

@@ -90,7 +90,7 @@
 			</evidenceDistribution>
 		</evidenceAttributes>
 	</objects>
-	<objects id="6948434282208250632" name="Network" metaConcept="Network" exportedId="6" attributesJsonString="{}" description="">
+	<objects id="6948434282208250632" name="Network" metaConcept="Network" exportedId="6" attributesJsonString="{&quot;EavesdropDefense_tc&quot;: &quot;3 2 1&quot;, &quot;EavesdropDefense_mc&quot;: &quot;4 2 1&quot;}" description="">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
@@ -232,7 +232,7 @@
 			</evidenceDistribution>
 		</evidenceAttributes>
 	</objects>
-	<objects id="-6545024564843820333" name="DataD" metaConcept="Data" exportedId="13" attributesJsonString="{&quot;DataNotPresent&quot;: &quot;8&quot;}" description="">
+	<objects id="-6545024564843820333" name="DataD" metaConcept="Data" exportedId="13" attributesJsonString="{&quot;DataNotPresent_tc&quot;: &quot;5 4 3&quot;, &quot;DataNotPresent_mc&quot;: &quot;3 4 5&quot;}" description="">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
@@ -243,77 +243,77 @@
 		</evidenceAttributes>
 		<evidenceAttributes description="" metaConcept="Read" consequence="5"/>
 	</objects>
-	<associations description="" sourceObject="5453977986670087946" targetObject="306166990110019022" sourceProperty="firstSteps" targetProperty="attemptAssume.attacker" id="287715069164019">
+	<associations description="" sourceObject="5453977986670087946" targetObject="306166990110019022" sourceProperty="firstSteps" targetProperty="attemptAssume.attacker" id="269129460775174">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="5453977986670087946" targetObject="-4905854079385448990" sourceProperty="firstSteps" targetProperty="highPrivilegesAchieved.attacker" id="648830562756591">
+	<associations description="" sourceObject="5453977986670087946" targetObject="-4905854079385448990" sourceProperty="firstSteps" targetProperty="highPrivilegesAchieved.attacker" id="215146702648387">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="5453977986670087946" targetObject="-5505979328424817748" sourceProperty="firstSteps" targetProperty="highPrivilegesAchieved.attacker" id="251668027784876">
+	<associations description="" sourceObject="5453977986670087946" targetObject="-5505979328424817748" sourceProperty="firstSteps" targetProperty="highPrivilegesAchieved.attacker" id="159441676975664">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="5453977986670087946" targetObject="-3721440058067236638" sourceProperty="firstSteps" targetProperty="phishUser.attacker" id="303989217991280">
+	<associations description="" sourceObject="5453977986670087946" targetObject="-3721440058067236638" sourceProperty="firstSteps" targetProperty="phishUser.attacker" id="225985969538704">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="-3721440058067236638" targetObject="306166990110019022" sourceProperty="userIds" targetProperty="users" id="291363057791449">
+	<associations description="" sourceObject="-3721440058067236638" targetObject="306166990110019022" sourceProperty="userIds" targetProperty="users" id="100187327260396">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="306166990110019022" targetObject="-415643442616842877" sourceProperty="execPrivApps" targetProperty="executionPrivIds" id="162274020778012">
+	<associations description="" sourceObject="306166990110019022" targetObject="-415643442616842877" sourceProperty="execPrivApps" targetProperty="executionPrivIds" id="186361421214147">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="-415643442616842877" targetObject="-2737794731964282766" sourceProperty="networks" targetProperty="applications" id="328658873622249">
+	<associations description="" sourceObject="-415643442616842877" targetObject="-2737794731964282766" sourceProperty="networks" targetProperty="applications" id="769417509862227">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="-415643442616842877" targetObject="6948434282208250632" sourceProperty="networks" targetProperty="applications" id="335385100091730">
+	<associations description="" sourceObject="-415643442616842877" targetObject="6948434282208250632" sourceProperty="networks" targetProperty="applications" id="184520387933419">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="-415643442616842877" targetObject="-4905854079385448990" sourceProperty="vulnerabilities" targetProperty="application" id="400065616998024">
+	<associations description="" sourceObject="-415643442616842877" targetObject="-4905854079385448990" sourceProperty="vulnerabilities" targetProperty="application" id="320118736425007">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="6948434282208250632" targetObject="7084863276573869171" sourceProperty="applications" targetProperty="networks" id="184859969754169">
+	<associations description="" sourceObject="6948434282208250632" targetObject="7084863276573869171" sourceProperty="applications" targetProperty="networks" id="201400494674547">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="7084863276573869171" targetObject="-6545024564843820333" sourceProperty="containedData" targetProperty="containingApp" id="100641279675717">
+	<associations description="" sourceObject="7084863276573869171" targetObject="-6545024564843820333" sourceProperty="containedData" targetProperty="containingApp" id="306288049029282">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="7084863276573869171" targetObject="-5505979328424817748" sourceProperty="vulnerabilities" targetProperty="application" id="308788229987392">
+	<associations description="" sourceObject="7084863276573869171" targetObject="-5505979328424817748" sourceProperty="vulnerabilities" targetProperty="application" id="234022055047077">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="-2737794731964282766" targetObject="1786678963774377776" sourceProperty="applications" targetProperty="networks" id="277214282076010">
+	<associations description="" sourceObject="-2737794731964282766" targetObject="1786678963774377776" sourceProperty="applications" targetProperty="networks" id="775136415744728">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="1786678963774377776" targetObject="-6545024564843820333" sourceProperty="containedData" targetProperty="containingApp" id="254880826331568">
+	<associations description="" sourceObject="1786678963774377776" targetObject="-6545024564843820333" sourceProperty="containedData" targetProperty="containingApp" id="309568269393975">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>
 	</associations>
-	<associations description="" sourceObject="1786678963774377776" targetObject="2771453378040909236" sourceProperty="vulnerabilities" targetProperty="application" id="295421099654510">
+	<associations description="" sourceObject="1786678963774377776" targetObject="2771453378040909236" sourceProperty="vulnerabilities" targetProperty="application" id="143718770555062">
 		<existence type="FixedBoolean">
 			<parameters name="fixed" value="1.0"/>
 		</existence>

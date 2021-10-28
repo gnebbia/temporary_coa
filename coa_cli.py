@@ -22,7 +22,7 @@ if __name__ == "__main__":
     config = configparser.ConfigParser()
     config.read('coa.ini')
 
-    budget_remaining = 20
+    budget_remaining = 30
     print("BUDGET: ", budget_remaining)
 
     # Create an authenticated enterprise client
@@ -51,8 +51,8 @@ if __name__ == "__main__":
 
     svds = lang_meta["assets"]["Identity"]["defenses"]
     svr = next((d for d in svds if d["name"] == "Disabled"), False)
-    svr["metaInfo"]["cost"] = [20, 10]
-    svr["metaInfo"]["cost_time"] = [15, 10]
+    svr["metaInfo"]["cost"] = [30, 30]
+    svr["metaInfo"]["cost_time"] = [30, 10]
 
     svds = lang_meta["assets"]["SoftwareVulnerability"]["defenses"]
     svr = next((d for d in svds if d["name"] == "Remove"), False)
@@ -63,6 +63,8 @@ if __name__ == "__main__":
     svr = next((d for d in svds if d["name"] == "EavesdropDefense"), False)
     svr["metaInfo"]["cost"] = [7, 5]
     svr["metaInfo"]["cost_time"] = [10, 5]
+
+
     print("cost update done")
 
 
@@ -80,11 +82,11 @@ if __name__ == "__main__":
     models = enterprise.models.Models(client)
     #modelinfo = models.get_model_by_mid(project, "238548676164277")  ################# old
     #modelinfo = models.get_model_by_mid(project, "226155404398940")  #################
-    #modelinfo = models.get_model_by_mid(project, "420963146438357") # cost_Model_3
+    modelinfo = models.get_model_by_mid(project, "420963146438357") # cost_Model_3
     #modelinfo = models.get_model_by_mid(project, "114362693739575") # type-7
     #modelinfo = models.get_model_by_mid(project, "243886861364858")
     #modelinfo = models.get_model_by_mid(project, "244665522116755")  # examplemodel
-    modelinfo = models.get_model_by_mid(project, "164553780505755")  # simplemodel
+    # modelinfo = models.get_model_by_mid(project, "164553780505755")  # simplemodel
     # TODO get the model from simulation id
 
     print("model name  -- ", modelinfo.name)
