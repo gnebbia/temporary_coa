@@ -260,14 +260,13 @@ class AttackGraph(nx.DiGraph):
                                 break
                             if p_test:
                                 print("t - 13")
+                            print(">> SINCE NO USER SPECIFIED TAGS HAVE BEEN FOUND, WE CHECK THE JSON LANGUAGE MODEL")
                             print("Infostring check")
                             classdefs = meta_lang["assets"][self.nodes[node]["class"]]["defenses"]
                             defense_info = next((d for d in classdefs if d["name"] == self.nodes[node]["attackstep"]), False)
                                 #print(classdefs)
                                 #print(defense_info)
-                            print(">>BEFORE TRY")
                             try:
-                                print(">>ENTER TRY")
                                 def_class_cost = defense_info["metaInfo"]["cost"]
                                 def_class_cost_time = defense_info["metaInfo"]["cost_time"]
                                 def_name = defense_info["name"]
@@ -275,6 +274,10 @@ class AttackGraph(nx.DiGraph):
                                 #print("Time cost ", def_class_cost_time)
                                 current_mc = None
                                 current_tc = None
+
+                                print(">>MC array for this Defense before application is:", def_class_cost)
+                                print(">>TC array for this Defense before application is:", def_class_cost_time)
+
                                 if len(def_class_cost) > 1:
                                     current_mc = def_class_cost.pop(0)
                                 else:
@@ -284,6 +287,12 @@ class AttackGraph(nx.DiGraph):
                                     current_tc = def_class_cost_time.pop(0)
                                 else:
                                     current_tc = def_class_cost_time[0]
+
+                                print(">>MC current cost used for this Defense is:", current_mc)
+                                print(">>TC current cost used for this Defense now is:", current_tc)
+
+                                print(">>MC array for this Defense now is:", def_class_cost)
+                                print(">>TC array for this Defense now is:", def_class_cost_time)
 
                                 if current_mc:
                                     if budget_remaining > current_mc:
@@ -309,14 +318,10 @@ class AttackGraph(nx.DiGraph):
                                     #print("Time Cost", def_class_cost_time["first_use"])
                             except: 
                                 print("No tag or cost infostring")
-                                print(">>OUTSIDE TRY")
                         if flag == 1: #TODO when the defense is out of budget wrt top_attack_step (can be improved - once a defense out of budget it should be removed totally)
-                            print(">>ENTERING WEIRD BREAK")
                             break
-                    print(">>BEFORE BLOCK RANGE DEF")
                     block_range_def[best_def] = 0  # if both costs are high or no cost given
             else:
-                print(">>ENTERING DEFENSE NOT AVAILABLE")
                 print("Defense not available for Attack step:", top_attack_step)
 
             #print("Pred_Node", pred_nodes)
