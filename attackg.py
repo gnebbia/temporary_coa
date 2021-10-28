@@ -170,12 +170,17 @@ class AttackGraph(nx.DiGraph):
                                     cost_mc=[]
                                     cost_tc=[]
 
+
                                     this_cost_mc = None
                                     this_cost_tc = None
                                     print(def_costs)
+
+                                    # Check all tags associated to the defense
                                     for key in def_costs:
+                                        # If the tag has the same name of the defense
                                         if self.nodes[node]["attackstep"] == key[:-3]:
-                                            if key[-2:] == 'mc':
+                                            # If the tag ends with "_mc"
+                                            if key[-3:] == '_mc':
                                                 cost_mc = def_costs[key].split(" ")
                                                 print("MC Cost", cost_mc)
                                                 if len(cost_mc) > 1:
@@ -197,7 +202,8 @@ class AttackGraph(nx.DiGraph):
                                                     model_dict_list[idx]["attributesJsonString"][key] = [this_cost_mc]
                                                     print("NOW THE ARRAY MC COST WILL BE:")
                                                     print(model_dict_list[idx]["attributesJsonString"][key])
-                                            else:
+                                            # If the tag ends with "_tc"
+                                            elif key[-3:] == "_tc":
                                                 cost_tc = def_costs[key].split(" ")
                                                 print("TC cost ", cost_tc)
                                                 if len(cost_tc) > 1:
@@ -219,33 +225,33 @@ class AttackGraph(nx.DiGraph):
                                                     model_dict_list[idx]["attributesJsonString"][key] = [this_cost_tc]
                                                     print("NOW THE ARRAY TC COST WILL BE:")
                                                     print(model_dict_list[idx]["attributesJsonString"][key])
-                                    # print(def_cost)
                                    
                                         print("MODEL DEF COSTS")
                                         print(def_costs)
                                         print("END DEF COSTS")
 
-                                    if p_test:
-                                        print("t - 4", this_cost_mc, self.nodes[node]["attackstep"])
                                         if p_test:
+                                            print("t - 4", this_cost_mc, self.nodes[node]["attackstep"])
                                             print("t - 5", this_cost_mc)
                                         # cost_used=def_cost_list_dict[self.nodes[node]["name"]][0][No_of_times_used]
-                                        if budget_remaining > int(this_cost_mc):
-                                            changed_budget = budget_remaining - int(this_cost_mc)
-                                            # Increment defenses as many number of times used
-                                            # def_cost_list_dict[self.nodes[node]["name"]][2] = def_cost_list_dict[self.nodes[node]["name"]][2]+1
-                                            print("Cost of defense: ", this_cost_mc)
-                                            print("Time Cost of defense: ", this_cost_tc)
-                                            # print("Time Cost of defense: ", 10)
-                                            print("Apply the defense : AS TAG COST < BUDGET")
-                                            return self.nodes[node], changed_budget
-                                        else:
-                                            flag = 1
-                                            print("Cost of defense: ", this_cost_mc)
-                                            print("Out of budget")
-                                            # print(block_range_def[best_def])
-                                            block_range_def[best_def] = 0  # if both costs are high or no cost given
-                                            break
+                                        if this_cost_mc:
+                                            if budget_remaining > int(this_cost_mc):
+                                                changed_budget = budget_remaining - int(this_cost_mc)
+                                                # Increment defenses as many number of times used
+                                                # def_cost_list_dict[self.nodes[node]["name"]][2] = def_cost_list_dict[self.nodes[node]["name"]][2]+1
+                                                print("Cost of defense: ", this_cost_mc)
+                                                print("Time Cost of defense: ", this_cost_tc)
+                                                # print("Time Cost of defense: ", 10)
+                                                print("Apply the defense : AS TAG COST < BUDGET")
+                                                return self.nodes[node], changed_budget
+                                            else:
+                                                flag = 1
+                                                print("Cost of defense: ", this_cost_mc)
+                                                print("Out of budget")
+                                                # print(block_range_def[best_def])
+                                                block_range_def[best_def] = 0  # if both costs are high or no cost given
+                                                break
+
                                 if flag == 1:
                                     break
                             if flag == 1:
