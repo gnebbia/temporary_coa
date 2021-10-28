@@ -20,13 +20,13 @@ critical path converted to a graph
 
 Number of graphs sent to Merge -  2
 Change of NetworkX Graph Status
-['(28).DataNotPresent.Disable', '(28).Delete', '(28).Access', '(28).AttemptAccess', '(26).FullAccess', '(26).NetworkConnect', '(26).Disabled.Disable', '(26).Authenticate', '(32).Access', '(30).Assume', '(25).AccessNetworkAndConnections', '(30).Disabled.Disable', '(30).AttemptAssume', '(30).TwoFactorAuthentication.Disable', '(25).FullAccess', '(31).Use', '(27).EntryPoint']
-['(28).DataNotPresent.Disable', '(28).Delete', '(28).Access', '(28).AttemptAccess', '(26).FullAccess', '(26).NetworkConnect', '(26).Disabled.Disable', '(26).Authenticate', '(32).Access', '(30).Assume', '(25).AccessNetworkAndConnections', '(30).Disabled.Disable', '(30).AttemptAssume', '(30).TwoFactorAuthentication.Disable', '(25).FullAccess', '(31).Use', '(27).EntryPoint', '(32).AccessNetworkData', '(32).Eavesdrop', '(32).EavesdropDefense.Disable']
+['(28).DataNotPresent.Disable', '(28).Delete', '(28).Access', '(28).AttemptAccess', '(26).FullAccess', '(26).Authenticate', '(26).NetworkConnect', '(26).Disabled.Disable', '(30).Assume', '(32).Access', '(30).AttemptAssume', '(30).Disabled.Disable', '(30).TwoFactorAuthentication.Disable', '(25).AccessNetworkAndConnections', '(31).Use', '(25).FullAccess', '(27).EntryPoint']
+['(28).DataNotPresent.Disable', '(28).Delete', '(28).Access', '(28).AttemptAccess', '(26).FullAccess', '(26).Authenticate', '(26).NetworkConnect', '(26).Disabled.Disable', '(30).Assume', '(32).Access', '(30).AttemptAssume', '(30).Disabled.Disable', '(30).TwoFactorAuthentication.Disable', '(25).AccessNetworkAndConnections', '(31).Use', '(25).FullAccess', '(27).EntryPoint', '(32).EavesdropDefense.Disable', '(32).Eavesdrop', '(32).AccessNetworkData']
 
 Criticality of Attack steps
 
 Sorted Nodes
-['(27).EntryPoint', '(28).DataNotPresent.Disable', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(28).Access', '(28).AttemptAccess', '(26).FullAccess', '(26).NetworkConnect', '(26).Disabled.Disable', '(26).Authenticate', '(30).Assume', '(30).Disabled.Disable', '(30).AttemptAssume', '(30).TwoFactorAuthentication.Disable', '(31).Use', '(32).AccessNetworkData', '(32).EavesdropDefense.Disable', '(28).Delete', '(32).Eavesdrop']
+['(27).EntryPoint', '(28).DataNotPresent.Disable', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(28).Access', '(28).AttemptAccess', '(26).FullAccess', '(26).Authenticate', '(26).NetworkConnect', '(26).Disabled.Disable', '(30).Assume', '(30).AttemptAssume', '(30).Disabled.Disable', '(30).TwoFactorAuthentication.Disable', '(31).Use', '(32).EavesdropDefense.Disable', '(32).AccessNetworkData', '(28).Delete', '(32).Eavesdrop']
 
 Sorted Nodes with Criticality Scores
 (27).EntryPoint 	 20
@@ -37,16 +37,16 @@ Sorted Nodes with Criticality Scores
 (28).Access 	 18
 (28).AttemptAccess 	 18
 (26).FullAccess 	 18
+(26).Authenticate 	 18
 (26).NetworkConnect 	 18
 (26).Disabled.Disable 	 18
-(26).Authenticate 	 18
 (30).Assume 	 18
-(30).Disabled.Disable 	 18
 (30).AttemptAssume 	 18
+(30).Disabled.Disable 	 18
 (30).TwoFactorAuthentication.Disable 	 18
 (31).Use 	 18
-(32).AccessNetworkData 	 18
 (32).EavesdropDefense.Disable 	 18
+(32).AccessNetworkData 	 18
 (28).Delete 	 17
 (32).Eavesdrop 	 17
 
@@ -55,20 +55,20 @@ NODE : (28).Delete   Frequency : 1
 NODE : (28).Access   Frequency : 1
 NODE : (28).AttemptAccess   Frequency : 1
 NODE : (26).FullAccess   Frequency : 1
-NODE : (26).NetworkConnect   Frequency : 1
 NODE : (26).Authenticate   Frequency : 1
-NODE : (32).Access   Frequency : 2
+NODE : (26).NetworkConnect   Frequency : 1
 NODE : (30).Assume   Frequency : 1
-NODE : (25).AccessNetworkAndConnections   Frequency : 2
+NODE : (32).Access   Frequency : 2
 NODE : (30).AttemptAssume   Frequency : 1
-NODE : (25).FullAccess   Frequency : 2
+NODE : (25).AccessNetworkAndConnections   Frequency : 2
 NODE : (31).Use   Frequency : 1
+NODE : (25).FullAccess   Frequency : 2
 NODE : (27).EntryPoint   Frequency : 2
-NODE : (32).AccessNetworkData   Frequency : 1
 NODE : (32).Eavesdrop   Frequency : 1
+NODE : (32).AccessNetworkData   Frequency : 1
 
 Sorted Nodes
-['(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(27).EntryPoint', '(28).Delete', '(28).Access', '(28).AttemptAccess', '(26).FullAccess', '(26).NetworkConnect', '(26).Authenticate', '(30).Assume', '(30).AttemptAssume', '(31).Use', '(32).AccessNetworkData', '(32).Eavesdrop']
+['(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(27).EntryPoint', '(28).Delete', '(28).Access', '(28).AttemptAccess', '(26).FullAccess', '(26).Authenticate', '(26).NetworkConnect', '(30).Assume', '(30).AttemptAssume', '(31).Use', '(32).Eavesdrop', '(32).AccessNetworkData']
 
 Sorted Nodes with Criticality Scores
 (32).Access 	 15
@@ -79,13 +79,13 @@ Sorted Nodes with Criticality Scores
 (28).Access 	 14
 (28).AttemptAccess 	 14
 (26).FullAccess 	 14
-(26).NetworkConnect 	 14
 (26).Authenticate 	 14
+(26).NetworkConnect 	 14
 (30).Assume 	 14
 (30).AttemptAssume 	 14
 (31).Use 	 14
-(32).AccessNetworkData 	 14
 (32).Eavesdrop 	 14
+(32).AccessNetworkData 	 14
 
 Analyzing critical attack step to get suitable defense
 (32).Access
@@ -152,16 +152,16 @@ critical path converted to a graph
 
 Number of graphs sent to Merge -  1
 Change of NetworkX Graph Status
-['(32).EavesdropDefense.Disable', '(32).Eavesdrop', '(32).AccessNetworkData', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(27).EntryPoint']
+['(32).AccessNetworkData', '(32).Eavesdrop', '(32).EavesdropDefense.Disable', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(27).EntryPoint']
 
 Criticality of Attack steps
 
 Sorted Nodes
-['(32).EavesdropDefense.Disable', '(32).AccessNetworkData', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(27).EntryPoint', '(32).Eavesdrop']
+['(32).AccessNetworkData', '(32).EavesdropDefense.Disable', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(27).EntryPoint', '(32).Eavesdrop']
 
 Sorted Nodes with Criticality Scores
-(32).EavesdropDefense.Disable 	 7
 (32).AccessNetworkData 	 7
+(32).EavesdropDefense.Disable 	 7
 (32).Access 	 7
 (25).AccessNetworkAndConnections 	 7
 (25).FullAccess 	 7
@@ -169,25 +169,27 @@ Sorted Nodes with Criticality Scores
 (32).Eavesdrop 	 6
 
 Criticality of Attack steps
-NODE : (32).Eavesdrop   Frequency : 1
 NODE : (32).AccessNetworkData   Frequency : 1
+NODE : (32).Eavesdrop   Frequency : 1
 NODE : (32).Access   Frequency : 1
 NODE : (25).AccessNetworkAndConnections   Frequency : 1
 NODE : (25).FullAccess   Frequency : 1
 NODE : (27).EntryPoint   Frequency : 1
 
 Sorted Nodes
-['(32).Eavesdrop', '(32).AccessNetworkData', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(27).EntryPoint']
+['(32).AccessNetworkData', '(32).Eavesdrop', '(32).Access', '(25).AccessNetworkAndConnections', '(25).FullAccess', '(27).EntryPoint']
 
 Sorted Nodes with Criticality Scores
-(32).Eavesdrop 	 6
 (32).AccessNetworkData 	 6
+(32).Eavesdrop 	 6
 (32).Access 	 6
 (25).AccessNetworkAndConnections 	 6
 (25).FullAccess 	 6
 (27).EntryPoint 	 6
 
 Analyzing critical attack step to get suitable defense
+(32).AccessNetworkData
+Defense not available for Attack step: (32).AccessNetworkData
 (32).Eavesdrop
 This is the most critical attack step with Defense
 Candidate defense node: (32).EavesdropDefense.Disable   Total frequency blocked: 1
