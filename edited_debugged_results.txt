@@ -1,0 +1,148 @@
+BUDGET:  30
+Log in to Enterprise...done
+model name  --  Cost_Model_3
+TTC values for  28.Delete is [0.0, 0.0, 0.0]
+TTC values for  32.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  40.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  45.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  48.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  50.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+Steps of interest are:  ['28.Delete', '32.Eavesdrop', '40.Eavesdrop', '45.Delete', '48.Eavesdrop', '50.Delete']
+critical path fetched
+critical path fetched
+critical path fetched
+critical path fetched
+
+Number of graphs sent to Merge -  4
+
+1 - Defense Name:  (28).DataNotPresent.Disable
+Name of the Object and Associated Defense:  Db {'DataNotPresent_tc': '6 3 1', 'DataNotPresent_mc': '7 5 2'}
+Printing Tag Dictionary
+{'DataNotPresent_tc': '6 3 1', 'DataNotPresent_mc': '7 5 2'}
+{'DataNotPresent_tc': '6 3 1', 'DataNotPresent_mc': '7 5 2'}
+TC cost  ['6', '3', '1']
+This time TC cost will be 6
+The following applied values will be is: 3 1
+MC Cost ['7', '5', '2']
+This time MC cost will be 7
+The following applied values will be is: 5 2
+Monetary Cost:  7
+Time Cost of defense:  6
+Apply the defense: since COST < BUDGET
+UPDATED BUDGET:  23
+
+simulation created
+TTC values for  28.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  32.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  40.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  45.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  48.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  50.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+Steps of interest are:  ['28.Delete', '32.Eavesdrop', '40.Eavesdrop', '45.Delete', '48.Eavesdrop', '50.Delete']
+critical path fetched
+critical path fetched
+critical path fetched
+
+Number of graphs sent to Merge -  3
+
+Attack Step: (32).Eavesdrop
+This is the most critical attack step with Defense
+Candidate defense node: (32).EavesdropDefense.Disable   Total frequency blocked: 1
+Best defense detected: (32).EavesdropDefense.Disable
+Budget check ...
+1 - Defense Name:  (32).EavesdropDefense.Disable
+Name of the Object and Associated Defense:  LAN {}
+Empty Tag Dictionary
+>> SINCE USER SPECIFIED NO DEFENSE TAGS, WE CHECK THE JSON LANGUAGE MODEL
+JSON Infostring check
+>>I found the defense in the JSON 
+>>ANALYZING:  EavesdropDefense
+>>MC array for this Defense before application is: [7, 5]
+>>TC array for this Defense before application is: [10, 5]
+>>MC current cost used for this Defense is: 7
+>>TC current cost used for this Defense now is: 10
+>>MC array for this Defense now is: [5]
+>>TC array for this Defense now is: [5]
+>>AFFORDABLE DEFENSE: REMAINING BUDGET  > MONETARY COST
+Monetary Cost of defense:  EavesdropDefense is  7
+Time Cost of defense:  EavesdropDefense is  10
+Apply the defense: since COST < BUDGET
+UPDATED BUDGET:  16
+
+simulation created
+TTC values for  28.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  32.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  40.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  45.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  48.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  50.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+Steps of interest are:  ['28.Delete', '32.Eavesdrop', '40.Eavesdrop', '45.Delete', '48.Eavesdrop', '50.Delete']
+critical path fetched
+critical path fetched
+
+Number of graphs sent to Merge -  2
+
+Attack Step: (40).Eavesdrop
+This is the most critical attack step with Defense
+Candidate defense node: (40).EavesdropDefense.Disable   Total frequency blocked: 1
+Best defense detected: (40).EavesdropDefense.Disable
+Budget check ...
+1 - Defense Name:  (40).EavesdropDefense.Disable
+Name of the Object and Associated Defense:  NetworkA {'EavesdropDefense_tc': '2 2 2', 'EavesdropDefense_mc': '1 1 1'}
+Printing Tag Dictionary
+{'EavesdropDefense_tc': '2 2 2', 'EavesdropDefense_mc': '1 1 1'}
+{'EavesdropDefense_tc': '2 2 2', 'EavesdropDefense_mc': '1 1 1'}
+TC cost  ['2']
+This time is using  2
+
+MC Cost ['1']
+This time is using  1
+Monetary Cost:  1
+Cost of defense:  1
+Time Cost of defense:  2
+Apply the defense: since COST < BUDGET
+UPDATED BUDGET:  15
+
+
+simulation created
+TTC values for  28.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  32.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  40.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  45.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  48.Eavesdrop is [0.0, 0.0, 0.0]
+TTC values for  50.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+Steps of interest are:  ['28.Delete', '32.Eavesdrop', '40.Eavesdrop', '45.Delete', '48.Eavesdrop', '50.Delete']
+
+Attack Step: (48).Eavesdrop
+This is the most critical attack step with Defense
+Candidate defense node: (48).EavesdropDefense.Disable   Total frequency blocked: 1
+Best defense detected: (48).EavesdropDefense.Disable
+Budget check ...
+1 - Defense Name:  (48).EavesdropDefense.Disable
+Name of the Object and Associated Defense:  NetworkB {}
+Empty Tag Dictionary
+>> SINCE NO USER SPECIFIED TAGS HAVE BEEN FOUND, WE CHECK THE JSON LANGUAGE MODEL
+JSON Infostring check
+>>I found the defense in the JSON 
+>>ANALYZING:  EavesdropDefense
+>>MC array for this Defense before application is: [5]
+>>TC array for this Defense before application is: [5]
+>>MC current cost used for this Defense is: 5
+>>TC current cost used for this Defense now is: 5
+>>MC array for this Defense now is: [5]
+>>TC array for this Defense now is: [5]
+>>AFFORDABLE DEFENSE: REMAINING BUDGET  > MONETARY COST
+Monetary Cost of defense:  EavesdropDefense is  5
+Time Cost of defense:  EavesdropDefense is  5
+Apply the defense: since COST < BUDGET
+UPDATED BUDGET:  10
+
+
+
+TTC values for  28.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  32.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  40.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  45.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  48.Eavesdrop is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+TTC values for  50.Delete is [1.7976931348623157e+308, 1.7976931348623157e+308, 1.7976931348623157e+308]
+Steps of interest are:  ['28.Delete', '32.Eavesdrop', '40.Eavesdrop', '45.Delete', '48.Eavesdrop', '50.Delete']
