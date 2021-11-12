@@ -60,6 +60,7 @@ class AttackGraph(nx.DiGraph):
                 self.nodes[node["id"]]["frequency"] = node["frequency"]
                 self.nodes[node["id"]]["isDefense"] = node["isDefense"]
                 self.nodes[node["id"]]["ttc"] = node["ttc"]
+                #print(self.nodes[node["id"]]["id"], self.nodes[node["id"]]["index"], self.nodes[node["id"]]["eid"], self.nodes[node["id"]]["name"], self.nodes[node["id"]]["class"], self.nodes[node["id"]]["attackstep"], self.nodes[node["id"]]["frequency"], self.nodes[node["id"]]["isDefense"], self.nodes[node["id"]]["ttc"])
 
 
     def find_critical_attack_step(self, metric):
@@ -77,6 +78,15 @@ class AttackGraph(nx.DiGraph):
                                     node in self.nodes}
             if metric == 'o':
                 metrics_for_nodes = weighted_out_degrees
+        '''else:
+            weighted_out_degrees = {}
+            for node in self.nodes:
+                if not self.nodes[node]["isDefense"]:
+                    for child in self.successors(node):
+                        weighted_out_degrees[node] = sum(self.nodes[child]["frequency"])
+            if metric == 'o':
+                metrics_for_nodes = weighted_out_degrees
+            # we can put code for other metrics here like frequency-out degree combinations'''
 
         # sorting is done depending on the metrics
         if len(metric) == 1: # for 'f' and 'o' and not for 'fo' or 'of'
@@ -84,7 +94,7 @@ class AttackGraph(nx.DiGraph):
             #debug
             print("\nSorted Nodes")
             print(self.nodes_sorted)
-            # we can put code for other metrics here like frequency-out degree combinations with metric length 2
+        # we can put code for other metrics here like frequency-out degree combinations with metric length 2
 
         # assigning scores high to low on nodes according to the sorted order
         score = len(self.nodes_sorted)
@@ -118,6 +128,7 @@ class AttackGraph(nx.DiGraph):
             pred_nodes = []
             print("Attack Step:", top_attack_step)
             for pred_node in self.predecessors(top_attack_step):
+                #print("Pred Nodes ", pred_node)
                 pred_nodes.append(pred_node)
                 if self.nodes[pred_node]["isDefense"]:
                     print("This is the most critical attack step with Defense")
@@ -213,7 +224,7 @@ class AttackGraph(nx.DiGraph):
                                         if p_test:
                                             print("Monetary Cost: ", this_cost_mc)
                                         # cost_used=def_cost_list_dict[self.nodes[node]["name"]][0][No_of_times_used]
-                                        if this_cost_mc and this_cost_tc:
+                                        if this_cost_mc:
                                             print("Cost of defense: ", this_cost_mc)
                                             if budget_remaining > int(this_cost_mc):
                                                 changed_budget = budget_remaining - int(this_cost_mc)
@@ -229,29 +240,7 @@ class AttackGraph(nx.DiGraph):
                                                 # print(block_range_def[best_def])
                                                 block_range_def[best_def] = 0  # if both costs are high or no cost given
                                                 break
-                                        elif this_cost_mc and not this_cost_tc:
-                                            print("Cost of defense: ", this_cost_mc)
-                                            if budget_remaining > int(this_cost_mc):
-                                                changed_budget = budget_remaining - int(this_cost_mc)
-                                                # Increment defenses as many number of times used
-                                                # def_cost_list_dict[self.nodes[node]["name"]][2] = def_cost_list_dict[self.nodes[node]["name"]][2]+1
-                                                print("Time Cost of defense: Not specified by user")
-                                                # print("Time Cost of defense: ", 10)
-                                                print("Apply the defense : AS TAG COST < BUDGET")
-                                                # return self.nodes[node], changed_budget
-                                            else:
-                                                not_enough_budget = True
-                                                print("Out of budget")
-                                                # print(block_range_def[best_def])
-                                                block_range_def[best_def] = 0  # if both costs are high or no cost given
-                                                break
-                                        elif not this_cost_mc and this_cost_tc:
-                                            # Increment defenses as many number of times used
-                                            # def_cost_list_dict[self.nodes[node]["name"]][2] = def_cost_list_dict[self.nodes[node]["name"]][2]+1
-                                            print("Time Cost of defense:", this_cost_tc)
-                                            # print("Time Cost of defense: ", 10)
-                                            print("Apply the defense : AS TAG COST < BUDGET")
-                                            # return self.nodes[node], changed_budget
+
                                 if not_enough_budget:
                                     break
                             if not_enough_budget:
@@ -260,6 +249,8 @@ class AttackGraph(nx.DiGraph):
                             print("JSON Infostring check")
                             classdefs = meta_lang["assets"][self.nodes[node]["class"]]["defenses"]
                             defense_info = next((d for d in classdefs if d["name"] == self.nodes[node]["attackstep"]), False)
+                                #print(classdefs)
+                                #print(defense_info)
                             try:
                                 def_class_cost = defense_info["metaInfo"]["cost"]
                                 def_class_cost_time = defense_info["metaInfo"]["cost_time"]
@@ -273,31 +264,15 @@ class AttackGraph(nx.DiGraph):
                                 print(">>MC array for this Defense before application is:", def_class_cost)
                                 print(">>TC array for this Defense before application is:", def_class_cost_time)
 
-                                if not this_cost_mc and not this_cost_tc:
-                                    if len(def_class_cost) > 1:
-                                        current_mc = def_class_cost.pop(0)
-                                    else:
-                                        current_mc = def_class_cost[0]
+                                if len(def_class_cost) > 1:
+                                    current_mc = def_class_cost.pop(0)
+                                else:
+                                    current_mc = def_class_cost[0]
 
-                                    if len(def_class_cost_time) > 1:
-                                        current_tc = def_class_cost_time.pop(0)
-                                    else:
-                                        current_tc = def_class_cost_time[0]
-
-                                elif this_cost_mc and not this_cost_tc:
-                                    current_mc = this_cost_mc
-                                    if len(def_class_cost_time) > 1:
-                                        current_tc = def_class_cost_time.pop(0)
-                                    else:
-                                        current_tc = def_class_cost_time[0]
-
-                                elif this_cost_tc and not this_cost_mc:
-                                    current_tc = this_cost_tc
-                                    if len(def_class_cost) > 1:
-                                        current_mc = def_class_cost.pop(0)
-                                    else:
-                                        current_mc = def_class_cost[0]
-
+                                if len(def_class_cost_time) > 1:
+                                    current_tc = def_class_cost_time.pop(0)
+                                else:
+                                    current_tc = def_class_cost_time[0]
 
                                 print(">>MC current cost used for this Defense is:", current_mc)
                                 print(">>TC current cost used for this Defense now is:", current_tc)

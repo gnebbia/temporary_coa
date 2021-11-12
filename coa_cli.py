@@ -44,10 +44,10 @@ if __name__ == "__main__":
 
     # TODO Remove me! I am fake code to add cost as a JSON dict to SoftwareVulnerability.Remove
     # {first_use: <integer>, subsequent_use: <integer>}
-    svds = lang_meta["assets"]["Identity"]["defenses"]
-    svr = next((d for d in svds if d["name"] == "TwoFactorAuthentication"), False)
-    svr["metaInfo"]["cost"] = [10, 5]
-    svr["metaInfo"]["cost_time"] = [10, 5]
+    #svds = lang_meta["assets"]["Identity"]["defenses"]
+    #svr = next((d for d in svds if d["name"] == "TwoFactorAuthentication"), False)
+    #svr["metaInfo"]["cost"] = [10, 5]
+    #svr["metaInfo"]["cost_time"] = [10, 5]
 
     svds = lang_meta["assets"]["Identity"]["defenses"]
     svr = next((d for d in svds if d["name"] == "Disabled"), False)
@@ -82,11 +82,12 @@ if __name__ == "__main__":
     models = enterprise.models.Models(client)
     #modelinfo = models.get_model_by_mid(project, "238548676164277")  ################# old
     #modelinfo = models.get_model_by_mid(project, "226155404398940")  #################
-    modelinfo = models.get_model_by_mid(project, "420963146438357") # cost_Model_3
+    #modelinfo = models.get_model_by_mid(project, "420963146438357") # cost_Model_3
     #modelinfo = models.get_model_by_mid(project, "114362693739575") # type-7
-    #modelinfo = models.get_model_by_mid(project, "243886861364858")
+    #modelinfo = models.get_model_by_mid(project, "860752388881792") # imc
     #modelinfo = models.get_model_by_mid(project, "244665522116755")  # examplemodel
     # modelinfo = models.get_model_by_mid(project, "164553780505755")  # simplemodel
+    modelinfo = models.get_model_by_mid(project, "245703741252888")  # cost_Model_3v03
     # TODO get the model from simulation id
 
     print("model name  -- ", modelinfo.name)
